@@ -1,0 +1,43 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: grayscale(0.5);
+
+
+    display: block;
+}
+
+.modal-ctr {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background-color: rgb(16, 157, 103);
+    
+    width: 50vw;
+    height: 50vh;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px lightgrey,
+    -1px -1px 1px lightgrey;
+
+    
+}
+
+.modal-btn {
+    border: none;
+
+    position: absolute;
+
+    left: calc(100% - 40px);
+    top: 15px;
+    
+    transform: all 0.15s ease-in-out;
+}
+
+.modal-btn:hover {
+    cursor: pointer;
+}

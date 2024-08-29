@@ -1,0 +1,37 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+
+#hello {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #003300;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+        color: #00FF00;
+        font-size: 3em;
+        text-shadow: 0 0 5px #0f0;
+        animation: fadeInOut 2s linear infinite;
+        transform: translateY(0);
+    }
+  }
+
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  

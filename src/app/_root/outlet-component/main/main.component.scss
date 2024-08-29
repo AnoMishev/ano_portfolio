@@ -1,0 +1,312 @@
+
+//---------------------MAIN-HEAD-------------------//
+.light {
+    color: lightgreen;
+}
+
+#main-head {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../../../../assets/images/main-img.png');
+    object-fit: cover;
+    background-size: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    border-bottom: 9px solid black;
+
+    nav {
+        align-self: center;
+    
+        position: absolute;
+        top: 7vh;
+        right: 0;
+        
+        transform: translate(-20%, -63%);
+
+        ul {
+            list-style-type: none;
+        
+            display: flex;
+            gap: 1em;
+
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                
+                font-size: 2em;
+                text-shadow: 2px 2px 2px black;
+            }
+
+            li a:hover + .icon {
+                color: lightslategrey;
+                transform: rotate(-90deg);
+                transition: all 0.15s ease-in-out;
+            }
+            
+
+            a {
+                text-decoration: none;
+                color: yellow;
+            
+                padding: 0.3em;   
+            }            
+
+            a:hover {
+                cursor: pointer;
+            }
+        }
+
+        .icon {
+            transform: translate(-20%, 20%);
+            color: white;
+            font-size: 2.5vw;
+        }        
+        
+    }
+    
+    nav ul li a:hover {
+        text-shadow: 1px 1px 1px yellowgreen;
+    
+        opacity: 0.9;
+    }
+
+    
+#introduction {
+    align-self: flex-end;
+    position: relative;
+
+    transform: translate(-50%, 50%);
+    
+    h2 {
+        font-size: 5em;
+        color: yellowgreen;
+        text-shadow: 2px 2px 1px black;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.5em;
+    
+        position: absolute;
+        right: 0;
+        bottom: -15%;
+    
+        color: seashell;
+        text-shadow: 2px 2px 1px black;
+    }
+}
+
+}
+
+/*-------------MAIN-ABOUT-ME------------*/
+
+
+#about-me {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../../../../assets/images/image-from-rawpixel-id-14509038-jpeg.jpg');
+    background-size: 100%;
+    background-position-y: -150px;
+    border-bottom: 9px solid black;
+
+    place-content: center;
+
+    section {
+        max-width: 250px;
+        position: relative;
+        color: rgb(84, 30, 30);
+        font-size: 0.8em;
+        top: 42%;
+
+        h2 {
+            position: relative;
+        
+            padding: 0;
+            margin: 0;
+        
+            font-size: 2.1em;
+        }
+    
+        #click-more {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            color: red;
+            text-shadow: 1px 1px 1px black;
+        
+            transform: scale(1.5);
+        }
+    
+        #click-more:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.3);
+        }
+        
+        #click-more:hover ~ #hovered-text {
+            transform: scale(1.2);
+            transition: all 0.15s ease-in-out;
+        }
+        
+    
+       
+
+        #hovered-text {
+            position: absolute;
+            transform: scale(0);
+            width: 450px;
+            height: 100px;
+            left: 322px;
+            top: 20px;
+    
+            border-radius: 2%;
+            box-shadow: 1px 1px 1px black,
+            -1px -1px 1px black;
+    
+        
+        }
+    
+        p {
+            position: absolute;
+            left: 20%;
+            top: 94%;
+        
+            color: white;
+            font-size: 1.8em;
+
+            a {
+                color: lightgreen;
+            }
+        }
+        
+    }
+    
+
+
+
+    
+}
+
+
+
+/*-------------PORTFOLIO-GAMES------------*/
+
+
+#games {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../../../../assets/images/1349435.png');
+    background-size: 100%;
+    background-position-y: -100px;
+    object-fit: cover;
+
+    h2 {
+        margin: 0;
+    
+        text-align: center;
+        font-size: 2.6em;
+        padding: 0.5em;
+    
+        color: var(--main-clr);
+        text-shadow: 1px 1px 1px yellow;
+
+    }
+    ul {
+        position: relative;
+        top: 50%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+    a {
+        position: relative;
+        color: black;
+        text-shadow: 1px 1px 1px yellow;
+        font-size: 3em;
+        text-decoration: none;
+    }
+
+    #capital {
+        left: 35px;
+        bottom: 40px;
+    }
+
+    #fitness {
+        left: 30px;
+        bottom: 40px;
+    }
+    
+    #tictactoe {
+        left: 55px;
+        bottom: 40px;
+    }
+
+    #coming-first,
+    #coming-second {
+        position: relative;
+        padding: 0;
+        font-size: 2em;
+
+        color: white;
+        text-shadow: 1px 1px 1px greenyellow;
+    }
+
+    #coming-first {
+        right: 75px;
+        bottom: 40px;
+    }
+    #coming-second {
+        right: 15px;
+        bottom: 40px;
+    }
+}
+
+
+
+/* Media Query for screens with max-width of 600px */
+@media only screen and (max-width: 767px) {
+    
+    #main-head,
+    #about-me,
+    #games {
+        width: 100vw;
+        height: 50vh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0.5em;
+    }
+
+   
+}
+
+/* TUKA ZASTANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 24.08.2024
+/* Styles for medium screens (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #main-head,
+    #about-me,
+    #games {
+        width: 100vw;
+        height: 50vh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0.5em;
+    }
+
+
+
+}
+/* Styles for large screens (e.g., desktops) */
+@media only screen and (min-width: 1025px) {
+
+}

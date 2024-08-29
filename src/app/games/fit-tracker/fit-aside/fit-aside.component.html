@@ -1,0 +1,26 @@
+<section class="aside-section">
+    <h2>My Workouts</h2>
+    <p id="calls">Total cals:</p>
+    <p class="sorting">
+    <label for="sortBy">Sort By</label>
+    <select [formControl]="sortWorkout" id="sortBy" (change)="onSortChange()">
+        <option value="" disabled>Select sorting option</option>
+        <option *ngFor="let option of options" [value]="option.value">
+          {{ option.viewValue}}
+        </option>
+    </select>
+    </p>
+</section>
+<ul id="list">
+    <li *ngFor="let workout of workouts">
+      <div id="title">
+        <mat-icon>{{ workoutIcons[workout.type] }}</mat-icon>
+        <h3>{{ workout.type }}</h3>
+      </div>
+      <p>Calories: {{ workout.calories }} kcal</p>
+      <p>Duration: {{ workout.duration }}</p>
+      <p>Type: {{ workout.type }}</p>
+      <p>Date: {{ workout.timestamp }}</p>
+    </li>
+  </ul>
+  

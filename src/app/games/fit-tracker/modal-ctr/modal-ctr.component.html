@@ -1,0 +1,34 @@
+<div class="modal-content">
+    <form id="form" [formGroup]="workoutForm" (ngSubmit)="onSubmit()">
+        <p class="form-item">
+        <label for="title">Workout</label>
+        <input type="text" formControlName="title" id="title">
+        </p>
+
+        <p class="form-item">
+        <label for="calories">Calories</label>
+        <input type="number" formControlName="calories" id="calories">
+        </p>
+
+        <p class="form-item">
+        <label>Duration</label>
+        <input type="number" formControlName="hours" id="hours">
+        <input type="number" formControlName="minutes" id="minutes">
+        <input type="number" formControlName="seconds" id="seconds">
+        </p>
+
+        <p class="form-item">
+        <label for="type">Workout Type</label>
+        <select formControlName="type" id="type">
+        <option value="cycling">Cycling</option>
+        <option value="running">Running</option>
+        <option value="cardio">Cardio</option>
+        <option value="boxing">Boxing</option>
+        </select>
+        </p>
+        <p class="form-item" id="buttons">
+        <button id="submit" type="submit">Save Workout</button>
+        <button id="cancel" (click)="cancel()">X</button>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,93 @@
+@import url('./fonts.scss');
+@import url('./cv.scss');
+
+/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    --main-clr: #008000;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Levir', sans-serif;
+    overflow-x: hidden; /* FOR ANIMATION */
+} 
+
+/*---------------------USED-COLORS------------------*/
+
+.light-green { 
+    color: var(--main-clr);
+}
+
+.yellow {
+    color: yellow;
+    text-decoration: none;
+}
+
+.red {
+    color: rgb(203, 12, 12);
+
+}
+
+.blue {
+    color: lightskyblue;
+}
+
+app-component,
+#about-me {
+    display: grid;
+}
+
+
+app-component {
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-rows: minmax(30px, 100px) 1fr auto;
+
+}
+
+router-outlet {
+    display: none;
+}
+
+
+body[data-theme="light"] {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    font-size: 1em;
+
+    --clr-bg: #d45e6e ;
+       
+    --clr-bg-second: #bdfff6;
+    --clr-txt: var(--clr-bg-second);
+    .fit-aside {
+        color: black;
+    }
+}
+
+body[data-theme="dark"] {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    font-size: 1em;
+
+    --clr-bg: #a01023 ;
+       
+    --clr-bg-second: #1b897b;
+    --clr-txt: white;
+
+    .fit-aside {
+        background-color: gray;
+    }
+}
+

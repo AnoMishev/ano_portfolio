@@ -1,0 +1,22 @@
+@import url('./assets/styles/layout.scss');
+html, body { height: 100%; }
+body { margin: 0;}
+
+:root {
+    --background-clr: #002B00;
+    --background-cv-clr: #363636; 
+    --font-number-clr: #8e8e8e;
+    --light-blue-clr: #5be1e1;
+    --light-yellow-clr: #fceca4;
+    --main-text-clr: #ffffff;
+    --red-clr: #e98d8f;
+    --blue-list-clr: #74dadc;
+    --light-grey: #b4b4b4;
+}
+
+.custom-dialog-class {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+/* Ensure that your CSS does not interfere with marker styles */

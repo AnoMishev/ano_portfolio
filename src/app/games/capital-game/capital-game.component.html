@@ -1,0 +1,26 @@
+<section id="capital-game">
+    <div class="top">
+        <article class="game-question">
+            {{ isFinished ? 'The End' : answer }}
+        </article>
+        <h2>{{ gameQuestion }}</h2>
+    </div>
+    <div class="bottom">
+        <input [formControl]="input" (keydown.enter)="playGame()">
+        <p id="attempts">Attempts: {{ attempts }}</p>
+        <p id="highscore">HighScore: {{ highScore }}</p>
+    </div>
+    <div class="buttons">
+        <button id="skip" (click)="skipCountry()"> skip </button>
+        <button id="reset" (click)="resetGame()"> reset </button>
+        <button id="scores" (click)="openModal()"> scores </button>
+    </div>
+</section>
+<capital-modal [isOpen]="isModalOpen"
+[highScoresList]="highScoresList"
+(closeModal)="closeModal()">
+</capital-modal>
+<a routerLink="/home"><span>go to homepage</span></a>
+
+
+

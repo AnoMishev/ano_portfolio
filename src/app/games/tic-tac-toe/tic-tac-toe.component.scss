@@ -1,0 +1,224 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: rgb(211, 226, 226);
+  
+  }
+
+  
+  
+  .game {
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+}
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #28A745;
+      color: #17A2B8;
+      font-size: 2em;
+      cursor: pointer;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      box-shadow: 1px 1px 1px green,
+      -1px -1px 1px green;
+    }
+    
+    .modal-ctr {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      
+    }
+    
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+  
+      box-shadow: 1px 1px 1px lightgray,
+      -1px -1px 1px lightgray;
+      
+    }
+  
+    .modal-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 200px;
+  
+      background-color: #17A2B8;
+      color: white;
+      padding: 5em;
+  
+      p {
+        font-size: 1.3em;
+      }
+    }
+  
+    button {
+      display: inline-flex;
+      font-family: 'Levir', sans-serif;
+      font-size: 1.1em;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1.3px;
+      color: #313133;
+      background: tomato;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 0.5em;
+      }
+    
+    button::before {
+    content: '';
+      border-radius: 50%;
+      min-width: 60px;
+      min-height: 60px;
+      border: 6px solid yellow;
+      box-shadow: 0 0 60px yellow;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-in-out 0s;
+    }
+  
+    button:hover {
+      font-size: 0.7em;
+    }
+    
+    button:hover, 
+    button:focus {
+      background-color: rgb(133, 81, 81);
+      color: white;
+      transform: translateY(-6px);
+    }
+    
+    button:hover::before, 
+    button:focus::before {
+      opacity: 1;
+    }
+    
+    button::after {
+      content: '';
+      border-radius: 100%;
+      border: 6px solid red;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+    
+    button:hover::after, 
+    button:focus::after {
+      animation: none;
+      display: none;
+    }
+    
+    @keyframes ring {
+      0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+      }
+      100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+      }
+    }
+    
+    .red {
+      color: red;
+      text-shadow: 1px 1px 1px lightyellow,
+      -1px -1px 1px lightyellow;
+    }
+  
+    .green {
+      color: yellow;
+    }
+  
+    
+    .button {
+      background: #3D4C53;
+      margin : 20px auto;
+      width : 200px;
+      height : 50px;
+      overflow: hidden;
+      text-align : center;
+      transition : .2s;
+      cursor : pointer;
+      border-radius: 3px;
+      box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    }
+
+    a {
+      text-decoration: none;
+
+      position: absolute;
+      right: 0.5em;
+      top: 1em;
+    }
+
+    .btnTwo {
+      position : relative;
+      width : 200px;
+      height : 100px;
+      margin-top: -100px;
+      padding-top: 2px;
+      background : #26A69A;
+      left : -250px;
+      transition : .3s;
+    }
+    .btnText {
+      color : white;
+      transition : .3s;
+      
+    }
+    .btnText2 {
+      margin-top : 63px;
+      margin-right : -130px;
+      color : #FFF;
+      position: relative;
+      bottom: 3.5px;
+    }
+    .button:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
+      left: -130px;
+    }
+    .button:hover .btnText{ /*When hovering over .button change .btnText*/
+      margin-left : 65px;
+      
+    }
+    .button:active { /*Clicked and held*/
+      box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
+    }

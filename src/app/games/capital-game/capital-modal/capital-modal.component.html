@@ -1,0 +1,8 @@
+<div class="modal" [style.display]="isOpen ? 'block' : 'none'">
+    <div class="modal-ctr" #modal>
+        <ul>
+            <li *ngFor="let score of highScoresList">Player Score: {{ score }}</li>
+        </ul>
+        <button class="modal-btn" (click)="onCloseModal()"> X </button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<modal-ctr *ngIf="service.isEnded"
+[isVictory]="service.isVictory"
+[winnerName]="service.winnerName"
+(restartGameEvent)="restartGame()">
+</modal-ctr>
+  
+  <main class="game-ctr">
+    <article class="game">
+      <ng-container *ngFor="let row of service.cells; let i = index" >
+        <div *ngFor="let cell of row; let j = index" class="cell" (click)="makeMove(i, j)">
+          {{ cell }}
+        </div>
+      </ng-container>
+    </article>
+    <a routerLink="/home">
+      <div class="button">
+        <p class="btnText">HOME?</p>
+        <div class="btnTwo">
+          <p class="btnText2">GO!</p>
+        </div>
+     </div>
+    </a>
+  </main>
+
+
+
+  
