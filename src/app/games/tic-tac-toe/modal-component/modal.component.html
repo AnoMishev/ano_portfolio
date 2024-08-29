@@ -1,0 +1,10 @@
+<div class="modal-ctr">
+    <div class="modal-content">
+      <div class="modal-text">
+        <p id="gameover">Game Over!</p>
+        <p *ngIf="isVictory">Winner is <span class="green">{{ winnerName }}</span></p>
+        <p *ngIf="!isVictory">It's a <span class="red">draw!</span></p>
+        <button (click)="restartGame()">Restart</button>
+      </div>
+    </div>
+  </div>

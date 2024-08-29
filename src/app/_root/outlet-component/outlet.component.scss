@@ -1,0 +1,13 @@
+:host {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-rows: auto 1fr auto;
+
+}
+
+
+outlet-header {
+    z-index: 999999999999999999;
+}

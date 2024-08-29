@@ -1,0 +1,142 @@
+[
+    {
+        "countryName" : "Macedonia",
+        "countryCapital" : "Skopje"
+    },
+    {
+        "countryName" : "Portugal",
+        "countryCapital" : "Lisbon"
+    },
+    {
+        "countryName" : "Brazil",
+        "countryCapital" : "Brasilia"
+    },
+    {
+        "countryName" : "Denmark",
+        "countryCapital" : "Copenhagen"
+    },
+    {
+        "countryName" : "Czech Republic",
+        "countryCapital" : "Prague"
+    },
+    {
+        "countryName" : "Poland",
+        "countryCapital" : "Warsaw"
+    },
+    {
+        "countryName" : "Iran",
+        "countryCapital" : "Tehran"
+    },
+    {
+        "countryName" : "Iraq",
+        "countryCapital" : "Baghdad"
+    },
+    {
+        "countryName" : "Afghanistan",
+        "countryCapital" : "Kabul"
+    },
+    {
+        "countryName" : "Slovenia",
+        "countryCapital" : "Ljubljana"
+    },
+    {
+        "countryName" : "Turkey",
+        "countryCapital" : "Ankara"
+    },
+    {
+        "countryName" : "Spain",
+        "countryCapital" : "Madrid"
+    },
+    {
+        "countryName" : "France",
+        "countryCapital" : "Paris"
+    },
+    {
+        "countryName" : "Germany",
+        "countryCapital" : "Berlin"
+    },
+    {
+        "countryName" : "Italy",
+        "countryCapital" : "Rome"
+    },
+    {
+        "countryName" : "Greece",
+        "countryCapital" : "Athens"
+    },
+    {
+        "countryName" : "Norway",
+        "countryCapital" : "Oslo"
+    },
+    {
+        "countryName" : "Sweden",
+        "countryCapital" : "Stockholm"
+    },
+    {
+        "countryName" : "Finland",
+        "countryCapital" : "Helsinki"
+    },
+    {
+        "countryName" : "Netherlands",
+        "countryCapital" : "Amsterdam"
+    },
+    {
+        "countryName" : "Belgium",
+        "countryCapital" : "Brussels"
+    },
+    {
+        "countryName" : "Switzerland",
+        "countryCapital" : "Bern"
+    },
+    {
+        "countryName" : "Austria",
+        "countryCapital" : "Vienna"
+    },
+    {
+        "countryName" : "Australia",
+        "countryCapital" : "Canberra"
+    },
+    {
+        "countryName" : "New Zealand",
+        "countryCapital" : "Wellington"
+    },
+    {
+        "countryName" : "Japan",
+        "countryCapital" : "Tokyo"
+    },
+    {
+        "countryName" : "China",
+        "countryCapital" : "Beijing"
+    },
+    {
+        "countryName" : "South Korea",
+        "countryCapital" : "Seoul"
+    },
+    {
+        "countryName" : "India",
+        "countryCapital" : "New Delhi"
+    },
+    {
+        "countryName" : "Canada",
+        "countryCapital" : "Ottawa"
+    },
+    {
+        "countryName" : "United States",
+        "countryCapital" : "Washington, D.C."
+    },
+    {
+        "countryName" : "Mexico",
+        "countryCapital" : "Mexico City"
+    },
+    {
+        "countryName" : "Argentina",
+        "countryCapital" : "Buenos Aires"
+    },
+    {
+        "countryName" : "South Africa",
+        "countryCapital" : "Pretoria"
+    },
+    {
+        "countryName" : "Egypt",
+        "countryCapital" : "Cairo"
+    }
+]

@@ -1,0 +1,10 @@
+:host {
+    background-color: var(--clr-bg);
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    background-image: linear-gradient(to bottom, rgb(220, 88, 108) 1%, var(--clr-bg) 12px, var(--clr-bg) 100%);
+    p {
+        color: var(--clr-txt);
+        text-align: center;
+    }
+}

@@ -1,0 +1,183 @@
+$green-clr: #8DB600;
+$white-clr: #FCF6F5;
+$yellow-clr: #FFDB58;
+
+:host {
+    
+    height: 100vh;
+    width: 100vw;
+
+
+    background-color: $green-clr;
+}
+
+#capital-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: centerr;
+}
+
+
+
+:host,
+.top,
+.bottom,
+.buttons,
+.game-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.game-question {
+    font-size: 1.4em;
+}
+
+
+
+
+.game,
+.bottom,
+.top {
+    flex-direction: column;
+}
+
+
+.top > .game-question {
+    background-color: $yellow-clr;
+
+    width: 200px;
+    height: 150px;
+    font-size: 5em;
+
+    color: green;
+}
+
+.top > h2 {
+    color: #ff003b;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black,
+    -1px -1px 1px black;
+    
+    font-size: 2em;
+}
+
+.bottom { 
+    color: $white-clr;
+}
+
+.buttons {
+    gap: 0.5em;
+    
+    width: 200px;
+    height: 60px;
+}
+
+.buttons > * {
+    width: 100%;
+    padding: 0.5em;
+
+    border: none;
+    border-radius: 1em;
+
+    transition: all 0.15s ease-in-out;
+
+    text-transform: uppercase;
+}
+
+.buttons > *:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.buttons > #skip {
+    background-color: #FFDB58;
+}
+
+.buttons > #reset {
+    background-color: red;
+    color: white;
+}
+
+.buttons > #scores {
+    background-color: blueviolet;
+    color: yellow;
+}
+
+.bottom > #input {
+    padding: 0.3em;
+    
+    text-align: center;
+}
+
+input {
+    outline: none;
+
+    padding: 0.3em;
+
+    background-color: lightyellow;
+    color: green;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+input:focus {
+    background-color: rgb(192, 222, 232);
+    box-shadow: 1px 1px 1px bisque,
+    -1px -1px 1px bisque;
+
+    
+}
+
+a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    transition: all .35s;
+    background-color: yellow;
+
+    border-radius: 10px;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+    border-radius: 8px;
+  }
+  
+  a:hover{
+    color: #fff;
+    text-transform: uppercase;
+
+    font-size: 1em;
+    transition: all 0.15s ease-in-out;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }

@@ -1,0 +1,25 @@
+:host {
+    background-color: black;
+    overflow: hidden;
+}
+
+h2 {
+    position: relative;
+
+    color: var(--main-clr);
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 0;
+    animation: header-title 27s linear infinite;
+}
+
+
+@keyframes header-title { 
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
