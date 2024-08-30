@@ -8,7 +8,7 @@ h2 {
 
     color: var(--main-clr);
     text-transform: uppercase;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: 2vw;
     margin: 0;
     animation: header-title 27s linear infinite;
 }
@@ -21,5 +21,12 @@ h2 {
 
     100% {
         transform: translateX(100%);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    h2 {
+        font-size: 4vw;
     }
 }

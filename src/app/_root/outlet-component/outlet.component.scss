@@ -3,11 +3,17 @@
     width: 100vw;
     height: 100vh;
 
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 2vw 1fr auto;
 
 }
 
 
 outlet-header {
     z-index: 999999999999999999;
+}
+
+@media only screen and (max-width: 767px) {
+    :host {
+    grid-template-rows: 5vw 1fr auto;
+    }
 }
