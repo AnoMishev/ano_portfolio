@@ -286,20 +286,72 @@
     }
 
     #main-head {
-        background-position: -160px;
         nav {
             font-size: 1.5em;
             top: 8%;
             right: -40px;
+
+            li {
+                span {
+                transform: translate(0, -30%);
+            }
+        }
         }
 
         #introduction {
             font-size: 1.35em;
-            top: -30px;
+            
             right: -70px;
         }
     }
 
+    #about-me {
+        font-size: 1em;
+        
+        section {
+            top: -100%;
+    
+            h2 {
+                text-shadow: 1px 1px 1px lightblue;
+            }
+        }
+    }
+
+    #games {
+        background-position: -10px;
+
+        h2 {
+            font-size: 5em;
+            color: black;
+            text-shadow: 3px 3px 10px yellow;
+            text-transform: uppercase;
+        }
+
+        #coming-first,
+        #coming-second {
+            display: none;
+        }
+
+        #tictactoe,
+        #capital,
+        #fitness {
+            left: 0;
+            bottom: 0;
+        }
+
+        ul {
+            font-size: 1.5em;
+            top: 0;
+            left: -6%;
+            display: flex;
+            justify-content: space-around;
+    
+            li a {
+                color: red;
+                text-shadow: 3px 3px 2px white;
+            }
+        }
+    }
    
 }
 
