@@ -9,6 +9,8 @@ $yellow-clr: #FFDB58;
 
 
     background-color: $green-clr;
+
+    
 }
 
 #capital-game {
@@ -18,6 +20,10 @@ $yellow-clr: #FFDB58;
     justify-content: centerr;
 }
 
+
+#submit {
+    display: none;
+  }
 
 
 :host,
@@ -73,18 +79,24 @@ $yellow-clr: #FFDB58;
     
     width: 200px;
     height: 60px;
+
+    
 }
 
-.buttons > * {
+.buttons > *,
+#submit {
+    font-size: 1.3em;
     width: 100%;
-    padding: 0.5em;
+    padding: 0.2em;
 
     border: none;
-    border-radius: 1em;
+    border-radius: 0.5em;
 
     transition: all 0.15s ease-in-out;
 
     text-transform: uppercase;
+
+    font-family: 'Levir';
 }
 
 .buttons > *:hover {
@@ -180,4 +192,34 @@ a{
   
   a:hover:after{
     width: 100%;
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    #submit {
+        display: block;
+        font-size: 1em;
+
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 1px 1px 1px lightgray,
+        -1px -1px 1px lightgray;
+        
+        background-color: lightgreen;
+        color: purple;
+
+        position: relative;
+        top: 10px;
+
+    }
+
+    #submit:hover {
+        cursor: pointer;
+    }
+    .top {
+        h2 {
+            font-size: 1.6em;
+        }
+    }
   }
