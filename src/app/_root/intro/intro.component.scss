@@ -137,6 +137,12 @@
 @media only screen and (max-width: 767px) {
     :host {
         font-size: 1em;
+
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #welcome {

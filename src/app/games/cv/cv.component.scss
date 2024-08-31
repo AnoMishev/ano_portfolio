@@ -582,16 +582,39 @@ p {
 }
 
 
-
-
-
-
-
-/* 本体と関係ないスタイル */
-.container {
-    position: absolute;
-
+.btn {
+	background: #7C7C7C;
+    font-family: 'Levir';
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 1rem;
+	min-width: 6em;
+	padding: 0.4em;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
 }
-.button:not(:last-child){
-    margin-bottom : 80px ;
+
+.btn.primary {
+	background: #881400;
+	
+	&:focus,
+	&:hover {
+		background: #A81000;
+	}
+}
+
+.btn:hover {
+    cursor: pointer;
 }
