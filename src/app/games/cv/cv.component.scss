@@ -615,6 +615,70 @@ p {
 	}
 }
 
+#btnPhone {
+    display: none;
+}
 .btn:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) { 
+:host {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+
+    overflow: auto;
+}
+
+#btnPhone {
+    font-family: 'Levir';
+    font-size: 1.6em;
+    display: block;
+    position: absolute;
+    right: -0.5em;
+    top: 1.5em;
+    width: 1.4em;
+    height: 1.3em;
+
+    background-color: #A81000;
+    color: white;
+
+    border: none;
+    box-shadow: 0.2px 0.2px 2px lightcoral;
+}
+
+.btn {
+    display: none;
+}
+
+#front-page,
+#btn,
+#back-page {
+    grid-column: 1 / -1;
+}
+
+#front-page {
+    grid-row: 1 / 2;
+}
+
+.btn {
+    grid-row: 2 / 3;
+}
+#back-page {
+    grid-row: 3 / -1;
+}
+
+.numbers {
+    display: none;
+}
+
+#front-page,
+#back-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+}
 }

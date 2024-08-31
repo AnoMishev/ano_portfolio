@@ -1,37 +1,14 @@
 <section id="front-page">
     <div class="numbers">
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-        </ul>
+            <li *ngFor="let number of [].constructor(25); let i = index">{{ i + 1 }}</li>
+          </ul>
     </div>
 
     <div class="info">
         <div class="name">
             <h1><span class="light-blue">&lt;</span> cv <span class="light-blue">&gt;</span></h1>
+            <button id="btnPhone" routerLink="/home">X</button>
             <h2>Andrej Mishev</h2>
             <p>&lpar; JUNIOR_FRONT_END_WEB_DEVELOPER &rpar;</p>
         </div>
@@ -45,15 +22,15 @@
                     <li>Website</li>
                 </ul>
                 <ul id="list-info">
-                    <li>: 070405645company phone n</li>
-                    <li>: company email@email.com</li>
-                    <li>: company-name.com.mk</li>
+                    <li>: +389 999 555 111</li>
+                    <li>: company@email.com</li>
+                    <li>: company-website.com.mk</li>
                 </ul>
             </div>
-            <p id="date">August 2024</p>
+            <p id="date">{{ currentDate }}</p>
         </div>
         <div class="message">
-            <h2 id="message-title">Dear Mrs Jackson</h2>
+            <h2 id="message-title">Dear Visitor</h2>
             <p id="msg">As a young and passionate individual eager to begin my career in web development, I am driven by a strong desire to learn and grow. While I may not have formal work experience yet, I have dedicated myself to building a solid foundation in web technologies and design principles.
 
                 I am enthusiastic about the opportunity to work in a professional environment where I can contribute, learn from experienced developers, and take on new challenges. My dedication, creativity, and problem-solving skills allow me to quickly adapt and thrive in new situations.
@@ -68,32 +45,8 @@
 <section id="back-page">
     <div class="numbers">
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-        </ul>
+            <li *ngFor="let number of [].constructor(25); let i = index">{{ i + 1 }}</li>
+          </ul>
     </div>
 
     <div class="info backpage">
