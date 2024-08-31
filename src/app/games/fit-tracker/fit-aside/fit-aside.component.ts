@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectorRef, OnInit } from '@angular/core';
+import { Component, Input, ChangeDetectorRef, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
 import { Workout } from '../interfaces/workout-types.interface';
 import { FormControl } from '@angular/forms';
 
@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./fit-aside.component.scss']
 })
 export class FitAsideComponent {
-
+  @Output() clickToCloseWorkouts = new EventEmitter<void>()
   @Input() workouts: Array<Workout> = [];
   sortWorkout = new FormControl('');
   public options = [
@@ -60,5 +60,7 @@ export class FitAsideComponent {
     return hoursNum * 3600 + minutesNum * 60 + secondsNum;
   }
 
-
+  public handleClick() {
+    this.clickToCloseWorkouts.emit()
+  }
 }

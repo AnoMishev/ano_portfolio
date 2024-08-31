@@ -91,6 +91,10 @@
     animation: startTyping 1s infinite ease-in-out;
 }
 
+.btn {
+    display: none;
+}
+
 
 @keyframes startTyping {
     0% {
@@ -130,3 +134,59 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    :host {
+        font-size: 1em;
+    }
+
+    #welcome {
+        display: none;
+    }
+    #welcome pre {
+        position: relative;
+        animation: none;
+    
+}
+
+.btn {
+    font-family: 'Levir';
+	background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.6em;
+	margin: 1rem;
+	min-width: 7em;
+	padding: 0.2em;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
+}
+
+.btn.primary {
+	background: #881400;
+	
+	&:focus,
+	&:hover {
+		background: #A81000;
+	}
+}
+
+p {
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+}

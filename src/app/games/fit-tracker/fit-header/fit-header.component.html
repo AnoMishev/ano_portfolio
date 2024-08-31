@@ -1,5 +1,7 @@
 <h1 id="fit-header-title">Fitness Tracker app</h1>
 <div id="buttons">
-<button id="change" class="dark" (click)="toggleTheme()">{{ theme }}</button>
-<button routerLink="/home" id="home">Home</button>
+<button id="change" class="btn primary" (click)="toggleTheme()">{{ theme }}</button>
+<button routerLink="/home" id="home" class="btn secondary ">Home</button>
+<button (click)="handleClick()" class="btn tertiary">My Workouts</button>
 </div>
+

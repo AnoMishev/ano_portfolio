@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { ElementRef, Inject, inject, Injectable, Renderer2 } from "@angular/core";
 import * as L from "leaflet";
 import { MatDialog } from '@angular/material/dialog';
 import { BehaviorSubject, map } from "rxjs";
@@ -113,4 +113,5 @@ export class FitTrackerService {
     boxing: 'sports_mma',
     cardio: 'fitness_center'
   };
+
 }

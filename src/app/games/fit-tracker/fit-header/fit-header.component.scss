@@ -23,21 +23,6 @@
 }
 
 
-#change {
-    width: 100px;
-    height: 30px;
-    
-    border: none;
-    border-radius: 0.3em;
-
-    background-color: white;
-    color: red;
-
-    font-weight: 600;
-
-    transition: all 0.15s ease-in-out;
-}
-
 #change.dark {
     background-color: lightslategray;
     color: black;
@@ -119,5 +104,60 @@ $speed: 0.5s;
     background: #323237;
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
+  }
+}
+
+.btn {
+	background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	min-width: 2em;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
+}
+
+.btn.primary {
+	background: #881400;
+	
+	&:focus,
+	&:hover {
+		background: #A81000;
+	}
+}
+
+.btn.secondary {
+	background: #005800;
+	
+	&:focus,
+	&:hover {
+		background: #006800;
+	}
+}
+
+.btn.tertiary {
+	background: #0000BC;
+	
+	&:focus,
+	&:hover {
+		background: #0000FC;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    display: none;
   }
 }

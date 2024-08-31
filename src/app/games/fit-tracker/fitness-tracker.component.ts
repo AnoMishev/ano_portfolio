@@ -1,9 +1,10 @@
-import { Component, inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FitTrackerService } from './fit-tracker.service';
 import { Workout } from './interfaces/workout-types.interface';
 import { themeService } from './ft-theme.service';
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { FitAsideComponent } from './fit-aside/fit-aside.component';
 
 @Component({
   selector: 'app-fit-tracker',
@@ -19,7 +20,6 @@ export class FitTrackerComponent implements OnInit, OnDestroy {
   private _renderer = inject(Renderer2);
   private _document = inject(DOCUMENT);
   public darkOrLight!: string;
-
   private subscriptions: Subscription = new Subscription();
 
   constructor() { }
@@ -57,8 +57,12 @@ export class FitTrackerComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
     this.service.resetIsWaiting();
   }
-
-  public handleSubmit(): void {
-    console.log('Button clicked');
+  public openWorkouts(): void {
+    const aside = this._document.querySelector('app-fit-aside')
+    this._renderer.addClass(aside, 'open')
+}
+  public closeWorkouts(): void {
+    const aside = this._document.querySelector('app-fit-aside')
+    this._renderer.removeClass(aside, 'open')
   }
 }
