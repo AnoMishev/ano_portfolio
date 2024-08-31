@@ -1,10 +1,10 @@
-<app-fit-header class="fit-header" [theme]="darkOrLight"></app-fit-header>
+<app-fit-header class="fit-header" [theme]="darkOrLight"  (clickToOpenWorkouts)="openWorkouts()" ></app-fit-header>
 <app-fit-main id="map"></app-fit-main>
-<app-fit-aside class="fit-aside" [workouts]="workouts"></app-fit-aside>
+<app-fit-aside class="fit-aside" [workouts]="workouts" (clickToCloseWorkouts)="closeWorkouts()"></app-fit-aside>
 <app-fit-footer class="fit-footer"></app-fit-footer>
-<ng-container *ngIf="isWaiting" id="welcome">
+<!-- <ng-container *ngIf="isWaiting" id="welcome">
     <div id="hello">
         <p>if you want to continue, please press allow and wait to initalize the application</p>
     </div>
 </ng-container>
-
+ -->
