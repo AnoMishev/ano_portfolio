@@ -632,6 +632,10 @@ p {
     overflow: auto;
 }
 
+.message {
+    display: flex;
+    flex-direction: column;
+}
 #btnPhone {
     font-family: 'Levir';
     font-size: 1.6em;
@@ -680,5 +684,21 @@ p {
     width: 100vw;
     height: 100vh;
     
+}
+
+#back-page {
+    height: 122vh;
+}
+
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 80px);
+    gap: 5em;
+
+    .awards {
+        margin-top: 3em;
+    }
 }
 }
