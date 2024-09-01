@@ -1,6 +1,5 @@
 :host {
-    background-color: var(--clr-bg-second);
-    color: var(--clr-txt);
+    background-color: #FFC107;
     
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -20,11 +19,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    color: #141E30;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 1px lightcyan;
     h2,
     p {
         font-size: 1em;
     }
+}
+
+#sortBy {
+    margin-right: 10px;
+}
+
+#close {
+    display: none;
 }
 
 ul#list {
@@ -33,13 +42,14 @@ ul#list {
     flex-direction: column;
     gap: 1em;
     list-style-type: none;
-    color: brown;
+    color: white;
+    font-size: 1.2em;
 
     li {
-        background-color: lightseagreen;
+        background-color:  #2b3d60;
         border-radius: 0.5em;
-        box-shadow: 1px 1px 1px lightgrey;
-        padding: 1em;
+        box-shadow: 1px 1px 1px #141E30;
+        padding: 0.5em;
         margin-top: 1em;
         p {
             span {
@@ -66,7 +76,7 @@ ul#list {
 
 ul#list li h3 {
     color: gold;
-    text-shadow: 1px 1px 1px lightseagreen;
+    text-transform: uppercase;
 }
 
 section.aside-section { 
@@ -93,6 +103,7 @@ section.aside-section {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.5em;
 }
 
 @media only screen and (max-width: 767px) {
@@ -106,5 +117,9 @@ section.aside-section {
 
 :host {
     display: none;
+}
+
+#close {
+    display: block;
 }
 }

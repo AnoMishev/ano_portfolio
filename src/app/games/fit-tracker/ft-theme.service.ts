@@ -1,6 +1,8 @@
 import { ElementRef, inject, Injectable } from "@angular/core";
 import { Renderer2 } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
+import { FitTrackerService } from "./fit-tracker.service";
+import * as L from "leaflet";
 
 @Injectable({
     providedIn: 'root'
