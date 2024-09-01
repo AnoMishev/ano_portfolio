@@ -4,6 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { BehaviorSubject, map } from "rxjs";
 import { Workout, WorkoutData } from "./interfaces/workout-types.interface";
 import { ModalCtrComponent } from "./modal-ctr/modal-ctr.component";
+import { themeService } from "./ft-theme.service";
+import { TypeModifier } from "@angular/compiler";
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +17,15 @@ export class FitTrackerService {
   public isWaiting: boolean = true;
 
   private _map: L.Map | undefined;
+  private _totalCallsSubject$ = new BehaviorSubject<string | number>(0)
   private _workoutsSubject = new BehaviorSubject<Array<Workout>>(this.loadWorkoutsFromLocalStorage());
   public workoutsObservable = this._workoutsSubject.asObservable();
   private _markers: Array<L.Marker> = [];
+  
 
+  public totalCalls = this._totalCallsSubject$.asObservable()
 
   constructor(private _MAT_DIALOG: MatDialog) {}
-
-  ngOnInit() {
-    // Initialize workouts on service start
-    this._workoutsSubject.next(this.loadWorkoutsFromLocalStorage());
-
-  }
 
   initializeMap() {
     navigator.geolocation.getCurrentPosition(this.success.bind(this), this.error.bind(this));
@@ -81,7 +80,17 @@ export class FitTrackerService {
     localStorage.setItem('FT-Workouts', JSON.stringify(workouts));
     this._workoutsSubject.next(workouts); // Emit the updated workouts
     this.loadMarkers(workouts)
+
+      let calories = workouts.reduce((sum, workout) => sum + workout.calories, 0);
+      this._totalCallsSubject$.next(calories.toString())
+      this.getTotalCalories(workouts)
   }
+
+  getTotalCalories(workouts: any[]) {
+    let calories = workouts.reduce((sum, workout) => sum + workout.calories, 0);
+    this._totalCallsSubject$.next(calories.toString())
+  }
+ 
 
   private loadMarkers(workouts: Array<Workout>): void {
     const customIcon = L.icon({
@@ -95,6 +104,7 @@ export class FitTrackerService {
 
   private loadWorkoutsFromLocalStorage(): Array<Workout> {
     const workoutsJson = localStorage.getItem('FT-Workouts');
+    this.getTotalCalories(JSON.parse(workoutsJson || ''));
     return workoutsJson ? JSON.parse(workoutsJson) : [];
   }
 
@@ -113,5 +123,26 @@ export class FitTrackerService {
     boxing: 'sports_mma',
     cardio: 'fitness_center'
   };
+  
 
+  public updateMapTheme(theme: string): void {
+    if (this._map) {
+      const tileLayerUrl = theme === 'dark'
+        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'  // Dark theme tiles
+        : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';  // Light theme tiles
+
+      // Remove existing tile layers
+      this._map.eachLayer((layer) => {
+        if (layer instanceof L.TileLayer) {
+          this._map!.removeLayer(layer);
+        }
+      });
+
+      // Add new tile layer
+      L.tileLayer(tileLayerUrl, {
+        maxZoom: 20,
+        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      }).addTo(this._map);
+    }
+  }
 }

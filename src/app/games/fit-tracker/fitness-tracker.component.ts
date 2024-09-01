@@ -47,6 +47,7 @@ export class FitTrackerComponent implements OnInit, OnDestroy {
         let body = this._document.body;
         this._renderer.setAttribute(body, 'data-theme', theme);
         this.darkOrLight = theme;
+        this.service.updateMapTheme(theme)
       })
     );
     console.log(this.subscriptions)

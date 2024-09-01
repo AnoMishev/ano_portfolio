@@ -638,14 +638,17 @@ p {
 }
 #btnPhone {
     font-family: 'Levir';
-    font-size: 1.6em;
+    font-size: 1.5em;
     display: block;
     position: absolute;
     right: -0.5em;
     top: 1.5em;
-    width: 1.4em;
-    height: 1.3em;
-
+    width: 1em;
+    height: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     background-color: #A81000;
     color: white;
 
@@ -682,12 +685,16 @@ p {
 #back-page {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    padding: 2.5em 1em;
     
 }
 
+#front-page {
+    height: 135vh;
+}
+
 #back-page {
-    height: 122vh;
+    height: 170vh;
 }
 
 
@@ -701,4 +708,5 @@ p {
         margin-top: 3em;
     }
 }
+
 }
