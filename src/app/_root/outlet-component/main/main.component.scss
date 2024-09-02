@@ -1,4 +1,14 @@
-
+:host {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; /* Ensure the container is scrollable */
+    height: 100vh; 
+}
+#main-head,
+#about-me,
+#games {
+    scroll-snap-align: start;
+    height: 100vh; /* Snaps to the start of the container */
+}
 //---------------------MAIN-HEAD-------------------//
 .light {
     color: lightgreen;
@@ -350,10 +360,8 @@
             left: -5%;
             display: flex;
             justify-content: space-around;
-            li a {
-                color: red;
-                text-shadow: 1px 1px 1px white;
-            }
+            color: black;
+            text-shadow: 1px 1px 1px greenyellow;
         }
     }
    
@@ -361,7 +369,7 @@
 
 /* TUKA ZASTANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 24.08.2024
 /* Styles for medium screens (e.g., tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
     #main-head,
     #about-me,
     #games {
@@ -377,7 +385,242 @@
 
 
 }
-/* Styles for large screens (e.g., desktops) */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #main-head {
+        nav {
+            font-size: 1.5em;
+            top: 10%;
+            right: -40px;
 
+
+        }
+    }
+
+    #introduction {
+        font-size: 1.35em;
+        
+        right: -70px;
+    }
+
+    #about-me {
+        font-size: 1em;
+        
+        section {
+            top: -50%;
+    
+            h2 {
+                text-shadow: 1px 1px 1px lightblue;
+            }
+            
+            p {
+                text-shadow: 1px 1px 1px blue;
+            }
+
+        }
+    }
+
+    #games {
+        background-position: -10px;
+
+        h2 {
+            font-size: 5em;
+            color: black;
+            text-shadow: 2px 2px 1px yellow;
+            text-transform: uppercase;
+        }
+
+        #coming-first,
+        #coming-second {
+            display: none;
+        }
+
+        #tictactoe,
+        #capital,
+        #fitness {
+            left: 0;
+            bottom: 0;
+        }
+
+        ul {
+            font-size: 1.8em;
+            top: 0%;
+            left: -5%;
+            display: flex;
+            justify-content: space-around;
+            li a {
+                color: black;
+                text-shadow: 1px 1px 1px greenyellow;
+            }
+        }
+    }
+    
 }
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    #main-head,
+    #about-me,
+    #games {
+        width: 100vw;
+        height: 100vh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0.5em;
+    }
+    #main-head {
+        nav {
+            font-size: 2em;
+            top: 6%;
+            right: -40px;
+
+
+        }
+    }
+
+    #introduction {
+        font-size: 2em;
+        
+        right: -100px;
+    }
+
+    #about-me {
+        font-size: 1em;
+        
+        section {
+            top: -50%;
+    
+            h2 {
+                text-shadow: 1px 1px 1px lightblue;
+            }
+            
+            p {
+                text-shadow: 1px 1px 1px blue;
+            }
+
+        }
+    }
+
+    #games {
+        background-position: -10px;
+
+        h2 {
+            position: relative;
+            top: 10%;
+            font-size: 6em;
+            color: black;
+            text-shadow: 2px 2px 1px yellow;
+            text-transform: uppercase;
+        }
+
+        #coming-first,
+        #coming-second {
+            display: none;
+        }
+
+        #tictactoe,
+        #capital,
+        #fitness {
+            left: 0;
+            bottom: 0;
+        }
+
+        ul {
+            font-size: 2.5em;
+            top: 15%;
+            left: -5%;
+            display: flex;
+            justify-content: space-around;
+            li a {
+                color: black;
+                text-shadow: 1px 1px 1px greenyellow;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #main-head,
+    #about-me,
+    #games {
+        width: 100vw;
+        height: 100vh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0.5em;
+    }
+
+    #main-head {
+        nav {
+            font-size: 2em;
+            top: 6%;
+            right: -40px;
+
+
+        }
+    }
+
+    #introduction {
+        font-size: 2em;
+        
+        right: -100px;
+    }
+
+    #about-me {
+        font-size: 1em;
+        
+        section {
+            top: -50%;
+    
+            h2 {
+                text-shadow: 1px 1px 1px lightblue;
+            }
+            
+            p {
+                text-shadow: 1px 1px 1px blue;
+            }
+
+        }
+    }
+
+    #games {
+        background-position: -10px;
+
+        h2 {
+            position: relative;
+            top: 10%;
+            font-size: 6em;
+            color: black;
+            text-shadow: 2px 2px 1px yellow;
+            text-transform: uppercase;
+        }
+
+        #coming-first,
+        #coming-second {
+            display: none;
+        }
+
+        #tictactoe,
+        #capital,
+        #fitness {
+            left: 0;
+            bottom: 0;
+        }
+
+        ul {
+            font-size: 2.2em;
+            top: 15%;
+            left: -3%;
+            display: flex;
+            justify-content: space-around;
+            li a {
+                color: black;
+                text-shadow: 1px 1px 1px greenyellow;
+            }
+        }
+    }
+}
+

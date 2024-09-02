@@ -17,3 +17,9 @@ outlet-header {
     grid-template-rows: 5vw 1fr auto;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    :host {
+        grid-template-rows: 3vw 1fr auto;
+        }
+}

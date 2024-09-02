@@ -20,7 +20,7 @@ body {
     align-items: center;
 
     width: 100%;
-    height: 100%;
+    height: 120%;
     overflow: hidden;
     background-color: var(--background-clr);
 }
@@ -185,7 +185,7 @@ p {
 
 .backpage > div:not(:first-child) {
     position: relative;
-    bottom: 20px;
+    bottom: 30px;
 }
 
 .contact-info {
@@ -403,184 +403,6 @@ p {
     animation : eye_2 5s linear infinite ;
 }
 
-@keyframes sleep{
-    0%  {
-        height : 36px ;
-        border-radius : var(--border_radius1) ;
-    }
-    100%{
-        height : 32px ;
-        border-radius : var(--border_radius2) ;
-    }
-}
-@keyframes wakeup{
-    0%  {
-        height : 32px ;
-        border-radius : var(--border_radius2) ;
-    }
-    100%{
-        height : 56px ;
-        border-radius : var(--border_radius3) ;
-    }
-}
-@keyframes eye {
-    0%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    30%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    32%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-    }
-    34%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    70%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    72%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-    }
-    74%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    76%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-    }
-    78%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    100%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-}
-@keyframes eye_2 {
-    0%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    10%{
-        transform : translateX(0);
-    }
-    12%{
-        transform : translateX(3px);
-    }
-    20%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    22%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-    }
-    24%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    25%{
-        transform : translateX(3px);
-    }
-    27%{
-        transform : translateX(0);
-    }
-    74%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-        transform : translateX(0);
-    }
-    76%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-        transform : translateX(3px);
-    }
-    78%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    80%{
-        top : -4px ;
-        width : 8px ;
-        height : 2px ;
-    }
-    82%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-    }
-    85%{
-        transform : translateX(3px);
-    }
-    87%{
-        transform : translateX(0);
-    }
-    100%{
-        top : -6px ;
-        width : 6px ;
-        height : 6px ;
-        transform : translateX(0);
-    }
-}
-@keyframes body_hoo{
-    0%  {
-        bottom : 2px ;
-    }
-    100%{
-        bottom : 0 ;
-    }
-}
-@keyframes body_hoo_wakeup{
-    0%  {
-        bottom : 2px ;
-    }
-    100%{
-        bottom : 6px ;
-    }
-}
-@keyframes face_pen{
-    0%  {
-        height : 14px ;
-    }
-    100%{
-        height : 10px ;
-    }
-}
-@keyframes face_pen_wakeup{
-    0%  {
-        height : 14px ;
-    }
-    100%{
-        height : 28px ;
-    }
-}
-
 
 .btn {
 	background: #7C7C7C;
@@ -622,7 +444,7 @@ p {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 1150px) { 
 :host {
     display: grid;
     grid-template-columns: 1fr;
@@ -635,14 +457,15 @@ p {
 .message {
     display: flex;
     flex-direction: column;
+    font-size: clamp(3w, 5vw, 15px);
 }
 #btnPhone {
     font-family: 'Levir';
     font-size: 1.5em;
     display: block;
     position: absolute;
-    right: -0.5em;
-    top: 1.5em;
+    right: 0;
+    top: 1em;
     width: 1em;
     height: 0.9em;
     display: flex;
@@ -656,23 +479,17 @@ p {
     box-shadow: 0.2px 0.2px 2px lightcoral;
 }
 
-.btn {
-    display: none;
-}
 
 #front-page,
-#btn,
 #back-page {
     grid-column: 1 / -1;
 }
 
 #front-page {
     grid-row: 1 / 2;
+    
 }
 
-.btn {
-    grid-row: 2 / 3;
-}
 #back-page {
     grid-row: 3 / -1;
 }
@@ -690,23 +507,38 @@ p {
 }
 
 #front-page {
-    height: 135vh;
+    height: auto;
 }
 
 #back-page {
-    height: 170vh;
-}
+    height: auto;
 
+}
 
 .info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 80px);
-    gap: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 120vh;
+    font-size: clamp(3w, 5vw, 15px);
 
-    .awards {
-        margin-top: 3em;
-    }
 }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1150px) {
+    :host {
+        font-size: 1.7em;
+
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .receiver {
+        position: relative;
+        right: -10vw;
+    }
 
 }
