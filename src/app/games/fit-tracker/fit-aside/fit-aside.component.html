@@ -1,6 +1,6 @@
 <section class="aside-section">
     <h2>My Workouts</h2>
-    <p id="calls">Total cals:</p>
+    <p id="calls">Total cals: {{ totalCalls }}</p>
     <p class="sorting">
     <label for="sortBy" id="sortBy">Sort By</label>
     <select [formControl]="sortWorkout" id="sortBy" (change)="onSortChange()">
