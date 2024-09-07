@@ -16,6 +16,10 @@ const routes: Routes = [
     {
         path: 'tic-tac-toe',
         loadChildren: () => import('../games/tic-tac-toe/tic-tac-toe.module').then(m => m.TicTacToeModule)
+    },
+    {
+        path: 'calculator',
+        loadChildren: () => import('../games/calculator/calculator.component.module').then(m => m.CalculatorModule)
     }
 ]
 
