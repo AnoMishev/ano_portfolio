@@ -14,6 +14,8 @@
     position: relative;
     width: 500px;
     height: 500px;
+
+    transform: translate(18%, 10%);
 }
 
 
@@ -145,6 +147,33 @@
 
 }
 
+
+#home {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+
+    width: 3em;
+    height: 2em;
+
+    text-transform: uppercase;
+
+    border-radius: 25%;
+
+    font-size: 0.8em;
+    font-family: 'Levir';
+
+    background-color: purple;
+    color: yellow;
+
+}
+
+#home:hover {
+    cursor: pointer;
+
+    background-color: yellow;
+    color: purple;
+}
 
 
 

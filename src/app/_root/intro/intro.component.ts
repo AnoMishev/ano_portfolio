@@ -34,10 +34,7 @@ import { trailingCursor } from "cursor-effects";
       this._playAudio();
     }
     ngOnInit(): void {
-      const ROOT_ELEMENT = this._elRef.nativeElement.ownerDocument.documentElement
-      this._cursor = trailingCursor({
-        element: ROOT_ELEMENT
-      })
+
       
     }
 
