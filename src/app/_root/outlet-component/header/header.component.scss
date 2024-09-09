@@ -6,11 +6,11 @@ h2 {
     position: relative;
     white-space: nowrap; /* Prevents text wrapping to a new line */
     color: var(--main-clr);
-    text-transform: uppercase;
     font-size: 2vw;
     margin: 0;
     animation: header-title 27s linear infinite;
     padding-right: 100vw; /* Add padding equal to the viewport width to ensure text stays in view */
+    font-family: 'Levir';
 }
 
 
