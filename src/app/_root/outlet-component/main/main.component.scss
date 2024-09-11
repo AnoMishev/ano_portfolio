@@ -289,7 +289,7 @@
     #about-me,
     #games {
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
 
         background-size: cover;
         background-repeat: no-repeat;
@@ -297,6 +297,9 @@
         font-size: 0.5em;
     }
 
+    #main-head {
+        background-image: url('../../../../assets/images/welcome-phone2.avif');
+    }
     #main-head {
         nav {
             font-size: 1.5em;
@@ -306,6 +309,7 @@
             li {
                 span {
                 transform: translate(0, -30%);
+                
             }
         }
         }
@@ -315,11 +319,15 @@
             
             right: -70px;
         }
+        #introduction > h2 {
+            color: white;
+            text-shadow: 1px 1px 1px lightgreen !important;
+        }
     }
 
     #about-me {
         font-size: 1em;
-        
+        background-image: url('../../../../assets/images/about-phone\ .jpg');
         section {
             top: -50%; 
 
@@ -332,11 +340,14 @@
             }
             
             }
+            section > * {
+                text-shadow: 1px 1px 1px black;
+            }
         
     }
 
     #games {
-        background-position: -10px;
+        background-image: url('../../../../assets/images/games-phone.jpg');
 
         h2 {
             font-size: 5em;
@@ -375,7 +386,7 @@
     #about-me,
     #games {
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
 
         background-size: cover;
         background-repeat: no-repeat;

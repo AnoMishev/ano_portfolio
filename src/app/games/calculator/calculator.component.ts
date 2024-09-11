@@ -36,6 +36,7 @@ export class CalculatorComponent {
   
     // Обработка на внес на број
     if (num === '0' && this.input.value === '') {
+      console.log('testiram')
       return; // Превенирање водечки нули
     }
     
@@ -74,7 +75,8 @@ export class CalculatorComponent {
     return ['/', '*', '-', '+'].includes(value[value.length - 1] || '');
   }
   
-  // Функција која добива последниот операнд од внесот
+  // Функција која добива последниот операнд од внесот ПРОВЕРУВА ДАЛИ БРОЈОТ ИМА . АКО ИМА НЕ МОЖЕ ДА ДОДАДЕ! А, АКО НЕМА ОПЕРАТОР ЌЕ ГО ПРОВЕРИ 
+ // ЦЕЛИОТ БРОЈ ПРИМЕР 55 ЌЕ ПРОВЕРИ ДАЛИ ИМА . ИЛИ 55+2 НА 2 ЌЕ ПРОВЕРИ ДАЛИ ИМА . ИТН.
   private getLastOperand(): string {
     const value = this.input.value || '';
     const operators = ['/', '*', '-', '+'];
