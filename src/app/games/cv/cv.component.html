@@ -4,11 +4,11 @@
             <li *ngFor="let number of [].constructor(25); let i = index">{{ i + 1 }}</li>
           </ul>
     </div>
-
+    <button id="btnPhone" routerLink="/home">X</button>
     <div class="info">
         <div class="name">
             <h1><span class="light-blue">&lt;</span> cv <span class="light-blue">&gt;</span></h1>
-            <button id="btnPhone" routerLink="/home">X</button>
+            
             <h2>Andrej Mishev</h2>
             <p>&lpar; JUNIOR_FRONT_END_WEB_DEVELOPER &rpar;</p>
         </div>
@@ -41,6 +41,7 @@
     </div>
 
 </section>
+<button routerLink="/home" id="btn-normal">HOME</button>
 <section id="back-page">
     <div class="numbers">
         <ul>
@@ -49,7 +50,7 @@
     </div>
 
     <div class="info backpage">
-        <div class="name">
+        <div class="name backname">
             <h1><span class="light-blue">&lt;</span> cv <span class="light-blue">&gt;</span></h1>
             <h2>Andrej Mishev</h2>
             <p>&lpar; JUNIOR_FRONT_END_WEB_DEVELOPER &rpar;</p>
