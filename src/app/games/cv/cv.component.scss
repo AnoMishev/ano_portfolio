@@ -39,6 +39,7 @@ body {
     grid-template-columns: auto 1fr;
 
     padding: 1em;
+
 }
 
 #front-page {
@@ -46,6 +47,25 @@ body {
     grid-template-rows: repeat(4, auto);
 
     
+}
+
+#btn-normal {
+    font-family: 'Levir';
+    font-size: 1.3em;
+    padding: 0 0.5em;
+    margin: 0;
+
+    background-color:#f4cf47;
+    color: black;
+
+    box-shadow: 1px 1px 1px purple,
+    -1px -1px 1px purple;
+    border: none;
+}
+
+#btn-normal:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 
@@ -457,14 +477,14 @@ p {
 .message {
     display: flex;
     flex-direction: column;
-    font-size: clamp(3w, 5vw, 15px);
+    font-size: 1.1em;
 }
 #btnPhone {
     font-family: 'Levir';
     font-size: 1.5em;
     display: block;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 1em;
     width: 1em;
     height: 0.9em;
@@ -518,16 +538,22 @@ p {
 .info {
     display: flex;
     flex-wrap: wrap;
-    min-height: 120vh;
+    height: 100vh;
     font-size: clamp(3w, 5vw, 15px);
 
 }
+.receiver,
+.contact-information,
+.backname {
+    display: none;
+}
+
 
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1150px) {
     :host {
-        font-size: 1.7em;
+        font-size: 1.4em;
 
     }
 
