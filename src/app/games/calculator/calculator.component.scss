@@ -36,7 +36,8 @@
     .colored:nth-child(#{$i}) {
       border: 5px solid rgb($red, $green, $blue);
       top: $i * 1%;
-      left: $i * 1% +15%;
+      left: $i * 1% + (15%);
+
     }
   }
 
@@ -165,6 +166,7 @@
 
     background-color: purple;
     color: yellow;
+    transition: all 0.15s ease-in-out;
 
 }
 
