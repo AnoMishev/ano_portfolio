@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, inject, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { CalculatorService } from './calculator.component.service';
 
 @Component({
   selector: 'app-calculator',
@@ -9,22 +10,23 @@ import { FormControl } from '@angular/forms';
 export class CalculatorComponent {
   public input = new FormControl('')  // Контролер за внес на текст (функционалност на текстуален внес)
   public result: string | undefined; // Резултат од пресметката
-  private _elementRef = inject(ElementRef)
   private _renderer = inject(Renderer2)
+  private _calculatorService = inject(CalculatorService)
   @ViewChildren('colored') coloredElement!: QueryList<ElementRef>
 
   // Функција која се повикува кога ќе се притисне број
   public pressNum(num: string) {
+    const inputValue = this.input.value || '';
     // Обработка на внес на децимален знак
     if (num === '.') {
       // Проверува дали последниот карактер е оператор или ако влезот е празен
-      if (this.isLastCharOperator() || this.input.value === '') {
+      if (this._calculatorService.isLastCharOperator(inputValue) || this.input.value === '') {
         this.input.setValue(this.input.value + '0.');
         return;
       }
       
       // Добиј го последниот операнд
-      const lastOperand = this.getLastOperand();
+      const lastOperand = this._calculatorService.getLastOperand(inputValue)
       if (lastOperand.includes('.')) {
         return; // Не додавај друг децимален знак ако веќе постои во последниот операнд
       }
@@ -36,7 +38,6 @@ export class CalculatorComponent {
   
     // Обработка на внес на број
     if (num === '0' && this.input.value === '') {
-      console.log('testiram')
       return; // Превенирање водечки нули
     }
     
@@ -46,7 +47,8 @@ export class CalculatorComponent {
 
   // Функција која се повикува кога ќе се притисне оператор
   public pressOperator(op: string) {
-    if (this.isLastCharOperator()) {
+    const inputValue = this.input.value || '';
+    if (this._calculatorService.isLastCharOperator(inputValue)) {
       return; // Ако последниот карактер е оператор, не додавај нов оператор
     }
 
@@ -69,28 +71,6 @@ export class CalculatorComponent {
     this.result = ""; // Празни го резултатот
   }
 
-  // Функција која проверува дали последниот карактер е оператор
-  private isLastCharOperator(): boolean {
-    const value = this.input.value || '';
-    return ['/', '*', '-', '+'].includes(value[value.length - 1] || '');
-  }
-  
-  // Функција која добива последниот операнд од внесот ПРОВЕРУВА ДАЛИ БРОЈОТ ИМА . АКО ИМА НЕ МОЖЕ ДА ДОДАДЕ! А, АКО НЕМА ОПЕРАТОР ЌЕ ГО ПРОВЕРИ 
- // ЦЕЛИОТ БРОЈ ПРИМЕР 55 ЌЕ ПРОВЕРИ ДАЛИ ИМА . ИЛИ 55+2 НА 2 ЌЕ ПРОВЕРИ ДАЛИ ИМА . ИТН.
-  private getLastOperand(): string {
-    const value = this.input.value || '';
-    const operators = ['/', '*', '-', '+'];
-    
-    let lastOperatorPos = -1;
-    for (let i = value.length - 1; i >= 0; i--) {
-      if (operators.includes(value[i])) {
-        lastOperatorPos = i;
-        break;
-      }
-    }
-  
-    return lastOperatorPos === -1 ? value : value.substring(lastOperatorPos + 1);
-  }
 
   // Функција која ја пресметува и покажува конечната вредност
   public getAnswer() {
@@ -115,16 +95,10 @@ export class CalculatorComponent {
 
   }
 
-  private getRandomColor(): string {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-  }
 
   updateSquareColors(): void {
     this.coloredElement.forEach((element, index) => {
-        const color = this.getRandomColor();
+        const color = this._calculatorService.getRandomColor();
         this._renderer.setStyle(element.nativeElement, 'border-color', color);
     })
   }

@@ -102,11 +102,21 @@ export class FitTrackerService {
     this._markers = workouts.map((workout) => L.marker([workout.coords.lat, workout.coords.lng], { icon: customIcon }).addTo(this._map!));
   }
 
+
   private loadWorkoutsFromLocalStorage(): Array<Workout> {
     const workoutsJson = localStorage.getItem('FT-Workouts');
-    this.getTotalCalories(JSON.parse(workoutsJson || ''));
-    return workoutsJson ? JSON.parse(workoutsJson) : [];
-  }
+    
+    // Parse the workoutsJson safely, with a fallback to an empty array
+    const workouts = workoutsJson ? JSON.parse(workoutsJson) : [];
+    
+    // Call getTotalCalories only when there are valid workouts
+    if (workouts.length > 0) {
+        this.getTotalCalories(workouts);
+    }
+    
+    return workouts;
+}
+
 
   resetIsWaiting(): void {
     this.isWaiting = true;
