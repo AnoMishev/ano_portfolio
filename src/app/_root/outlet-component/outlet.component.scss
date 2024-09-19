@@ -1,25 +1,406 @@
+
 :host {
-    display: grid;
     width: 100vw;
     height: 100vh;
+}
 
-    grid-template-rows: 2vw 1fr auto;
+#portfolio {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../assets/images/main_photo.jpg');
 
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#up {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100vw;
+    justify-content: space-between;
+    .stars {
+        min-width: 400px;
+        min-height: 300px;
+        height: 200px;
+        -webkit-box-shadow: -2px 1px 18px -5px rgba(0,0,0,0.82);
+        -moz-box-shadow: -2px 1px 18px -5px rgba(0,0,0,0.82);
+        box-shadow: -2px 1px 18px -5px rgba(0,0,0,0.82);
+
+        }
+        
+        .one {
+            background-image: url('../../../assets/images/left_square.png');
+        }
+        
+        .two {
+            background-image: url('../../../assets/images/square_center.png');
+        }
+        
+        .three {
+            background-image: url('../../../assets/images/right_square.png');
+        }
+        
+}
+
+#down {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 300px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    #table {
+        width: 100vw;
+        height: auto;
+        position: relative;
+
+
+        #left-pencil,
+        #left-books,
+        #laptop,
+        #pinguin-on-laptop,
+        #lamp,
+        #right-flower,
+        #leva-fioka,
+        #desna-fioka,
+        #left-pinguins,
+        #right-pinguins {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #table-photo {
+            position: relative;
+            bottom: 0;
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            max-width: 100%; /* Make sure the image doesn't overflow */
+            max-height: 100%;
+        }
+
+        #left-pencil {
+            width: 40px;
+            height: 75px;
+            left: 10%;
+            top: -72px;
+            background-image: url('../../../assets/images/left_pencil.png');
+    
+        }
+    
+        #left-books {
+            width: 90px;
+            height: 55px;
+            left: 20%;
+            top: -53px;
+            background-image: url('../../../assets/images/left_books.png');
+            background-size: 100%;
+        }
+
+        #laptop {
+            width: 150px;
+            height: 87px;
+            left: 43%;
+            top: -83px;
+            background-image: url('../../../assets/images/laptop.png');
+        }
+
+        #laptop::after {
+            position: absolute;
+            
+            top: -200%;
+            z-index: 1111111111;
+            content: "Hello, I'am Andrej";
+            color: yellow;
+            text-shadow: 1px 1px 1px black,
+            -0.2px -0.2px 1px black;
+            width: 300px;
+            height: 170px;
+            font-size: 1.7em;
+            padding: 0;
+            margin: 0;
+            background-image: url('../../../assets/images/purple_cloud.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #pinguin-on-laptop {
+            width: 200px;
+            height: 200px;
+            left: 43.5%;
+            top: -60px;
+            background-image: url('../../../assets/images/main_pinguin.png');
+            background-size: 70%;
+        }
+
+        #lamp {
+            width: 105px;
+            height: 200px;
+            left: 56%;
+            top: -94px;
+            background-image: url('../../../assets/images/lamp.png');
+        }
+
+        #right-flower {
+            width: 47px;
+            height: 120px;
+            right: 10%;
+            top: -97px;
+            background-image: url('../../../assets/images/right_flower.png');
+        }
+        
+        #leva-fioka {
+            width: 100px;
+            height: 200px;
+            left: 3.76%;
+            top: 9%;
+            background-image: url('../../../assets/images/leva_fioka.png');
+            .menu {
+                position: absolute;
+                left: 35%;
+                top: 10%;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                padding: 0;
+              }
+              .line {
+
+                fill: none;
+                stroke: yellow;
+                stroke-width: 6;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              .line1 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+              .line2 {
+                stroke-dasharray: 60 60;
+                stroke-width: 6;
+              }
+              .line3 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+
+
+              .opened .line1 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+              }
+              .opened .line2 {
+                stroke-dasharray: 1 60;
+                stroke-dashoffset: -30;
+                stroke-width: 6;
+              }
+              .opened .line3 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+              }
+
+              ul {
+                display: none;
+                padding: 0;
+                top: 5%;
+                left: 62%;
+                list-style-type: none;
+                position: absolute;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    text-shadow: 0.5px 0.5px 1px yellow;
+                    font-size: 1.1em;
+                    text-transform: uppercase;
+                }
+            }
+            ul.opened {
+                display: inline-block;
+            }
+              
+        }
+
+        #left-pinguins {
+            width: 200px;
+            height: 143px;
+            left: 25%;
+            bottom: 0;
+            background-image: url('../../../assets/images/left_pinguins.png');
+        }
+
+        #right-pinguins {
+            width: 250px;
+            height: 132px;
+            right: 25%;
+            bottom: 0;
+            background-image: url('../../../assets/images/right_pinguins.png');
+        }
+
+        #desna-fioka {
+            width: 100px;
+            height: 200px;
+            right: 3.78%;
+            top: 9%;
+            background-image: url('../../../assets/images/desna_fioka.png');
+            .menu {
+                position: absolute;
+                left: 35%;
+                top: 10%;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                padding: 0;
+              }
+              .line {
+
+                fill: none;
+                stroke: yellow;
+                stroke-width: 6;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              .line1 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+              .line2 {
+                stroke-dasharray: 60 60;
+                stroke-width: 6;
+              }
+              .line3 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+              .opened .line1 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+              }
+              .opened .line2 {
+                stroke-dasharray: 1 60;
+                stroke-dashoffset: -30;
+                stroke-width: 6;
+              }
+              .opened .line3 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+              }
+              ul {
+                position: absolute;
+                top: 3%;
+                right: 70%;
+                display: none;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    text-shadow: 0.5px 0.5px 1px yellow;
+                }
+            }
+              ul.opened {
+                display: inline-block;
+            }
+              
+        }
+        }
 }
 
 
-outlet-header {
-    z-index: 999999999999999999;
-}
+@media only screen and (max-width: 400px) {
+    #laptop {
+        transform: translate(-24%, 0);
+    }
 
-@media only screen and (max-width: 767px) {
-    :host {
-    grid-template-rows: 5vw 1fr auto;
+    #pinguin-on-laptop {
+        transform: translate(-18%, 0);
+    }
+    #left-books {
+        display: none;
+    }
+
+    #leva-fioka,
+    #desna-fioka {
+        width: 20px !important;
     }
 }
+@media only screen and (max-width: 776px) {
+    .menu {
+        top: 5% !important;
+        left: 29% !important;
+    }
+    #laptop {
+        left: 39% !important;
+    }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    :host {
-        grid-template-rows: 3vw 1fr auto;
-        }
+    #pinguin-on-laptop {
+        left: 40% !important;
+    }
+    #leva-fioka,
+    #desna-fioka {
+        width: 70px !important;
+    }
+
+    .three {
+        display: none;
+   }
+   .one {
+       flex: 1;
+   }
+
+   #leva-fioka,
+   #desna-fioka {
+    .menu {
+        display: none !important;
+    }
+    ul {
+        background-color: black;
+        padding: 0.3em !important;
+        left: 0% !important;
+        top: -7% !important;
+        display: inline-block !important;
+        box-shadow: 1px 1px 1px black;
+    }
+   }
+
+   #desna-fioka {
+    ul {
+        top: -4% !important;
+        left: 35% !important;
+    }
+   }
+}
+
+@media only screen and (max-width: 1136px) {
+
+    #lamp,
+    #left-pinguins,
+    #right-pinguins {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1214px) {
+
+
+    .two {
+         display: none;
+    }
+    .one,
+    .three {
+        flex: 1;
+    }
 }

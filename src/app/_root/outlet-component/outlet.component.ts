@@ -5,9 +5,15 @@ import { Component, OnInit } from "@angular/core";
     templateUrl: './outlet.component.html',
     styleUrls: ['./outlet.component.scss']
 })
-export class OutletComponent implements OnInit{
+export class OutletComponent {
+    isLeftMenuOpen: boolean = false;
+    isRightMenuOpen: boolean = false;
 
-    ngOnInit(): void {
-        console.log('hello')
+    public openLeftMenu(): void {
+        this.isLeftMenuOpen = !this.isLeftMenuOpen;
+    }
+
+    public openRightMenu() {
+        this.isRightMenuOpen = !this.isRightMenuOpen;
     }
 }
