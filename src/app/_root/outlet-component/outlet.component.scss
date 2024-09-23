@@ -2,6 +2,7 @@
 :host {
     width: 100vw;
     height: 100vh;
+    overflow: hidden !important;
 }
 
 #portfolio {
@@ -320,6 +321,11 @@
 
 
 @media only screen and (max-width: 400px) {
+    .one {
+        min-height: 300px !important;
+        min-width: 20px !important;
+    }
+
     #laptop {
         transform: translate(-24%, 0);
     }
@@ -331,12 +337,15 @@
         display: none;
     }
 
-    #leva-fioka,
-    #desna-fioka {
-        width: 20px !important;
-    }
+
 }
+
 @media only screen and (max-width: 776px) {
+    #down {
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+
     .menu {
         top: 5% !important;
         left: 29% !important;
@@ -345,12 +354,14 @@
         left: 39% !important;
     }
 
+  
+
     #pinguin-on-laptop {
         left: 40% !important;
     }
     #leva-fioka,
     #desna-fioka {
-        width: 70px !important;
+        display: none;
     }
 
     .three {
