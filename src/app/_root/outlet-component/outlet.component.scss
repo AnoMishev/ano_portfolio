@@ -115,6 +115,7 @@
             position: absolute;
             
             top: -200%;
+            left: 60%;
             z-index: 1111111111;
             content: "Hello, I'am Andrej";
             color: yellow;
@@ -131,6 +132,45 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            animation: popUp 1s 1 ease-in-out;
+        }
+
+        #laptop::before {
+            position: absolute;
+            
+            top: -180%;
+            left: -60%;
+            z-index: 1111111111;
+            content: "Left for apps, right for cv";
+            color: yellow;
+            text-shadow: 1px 1px 1px black,
+            -0.2px -0.2px 1px black;
+            width: 300px;
+            height: 130px;
+            font-size: 1.7em;
+            padding: 0;
+            margin: 0;
+            background-image: url('../../../assets/images/purple_cloud.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation: popUp 1s 1 ease-in-out;
+        }
+        @keyframes popUp {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            
         }
 
         #pinguin-on-laptop {
@@ -321,6 +361,10 @@
 
 
 @media only screen and (max-width: 400px) {
+    :host {
+        height: 100dvh;
+    }
+
     .one {
         min-height: 300px !important;
         min-width: 20px !important;
@@ -340,6 +384,10 @@
 }
 
 @media only screen and (max-width: 776px) {
+    :host {
+        height: 100dvh;
+    }
+    
     #down {
         height: 100vh !important;
         overflow: hidden !important;
@@ -352,6 +400,7 @@
     #laptop {
         left: 39% !important;
     }
+
 
   
 
