@@ -463,3 +463,13 @@
         flex: 1;
     }
 }
+
+/* Target all iOS devices (including iPhones) */
+@supports (-webkit-touch-callout: none) {
+    /* CSS for all iPhones */
+    :host {
+        background-image: none;
+      background-color: lightgreen;
+    }
+  }
+  
