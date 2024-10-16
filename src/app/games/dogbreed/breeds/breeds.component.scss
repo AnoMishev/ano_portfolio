@@ -8,3 +8,22 @@ a {
     font-size: 1.6em;
     color: blueviolet;
 }
+
+
+#breeds {
+    background-color: purple;
+}
+
+#add-dog {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+}
+
+#add-button {
+    cursor: pointer !important;
+}

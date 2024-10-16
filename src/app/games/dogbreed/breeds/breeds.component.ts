@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, inject, Input, OnInit } from "@angular/core";
 import { MainService } from "../services/main-service";
 import { DogBreed } from "../interfaces/dogbreed.interface";
+import { SharedService } from "../services/shared-service";
 
 
 @Component({
@@ -12,6 +13,8 @@ export class BreedsComponent implements OnInit {
     private _mainService = inject(MainService)
     public breeds: Array<DogBreed> = [];
     public test = [5,3,2,1,5,6]
+    isVisible: boolean = false;
+    public sharedService = inject(SharedService)
     
 
     ngOnInit(): void {
@@ -24,12 +27,21 @@ export class BreedsComponent implements OnInit {
                 console.log('érror fetching breeds:', err)
             }
               })
+
+        this.sharedService.visibility$.subscribe(isvisible => {
+            this.isVisible = isvisible;
+            console.log('proverka dali raboti')
+        })
     }
 
     loadBreeds(): void {
         this._mainService.getBreeds().subscribe(breeds => {
             this.breeds = breeds;
         })
+    }
+
+    hideElement(): void {
+        this.sharedService.hideElement();
     }
 
     addDog(name: string, breed: string, age: string): void {
