@@ -1,0 +1,8 @@
+<h1>These are most famous breeds</h1>
+<ul>
+    <li *ngFor="let dog of breeds">
+    <a routerLink="/breed/{{dog.Id}}">{{dog.Name}}
+    </a>
+    </li>
+    
+</ul>

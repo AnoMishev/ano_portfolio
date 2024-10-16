@@ -1,0 +1,34 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+header {
+    background-color: #4a028d;
+    font-size: 1.4em;
+    nav {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+}
+main {
+    background-color: #FAEBD7;
+}
+
+footer {
+    text-align: center;
+    background-color: #4a028d;
+    color: white;
+}
+
+

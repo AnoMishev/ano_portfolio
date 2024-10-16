@@ -15,7 +15,7 @@
     width: 500px;
     height: 500px;
 
-    transform: translate(18%, 10%);
+    transform: translate(10%, 10%);
 }
 
 
@@ -178,5 +178,10 @@
 }
 
 
+@media (max-width: 600px) {
+    :host {
+       height: 100vh !important;
+       overflow: hidden;
+    }
 
-
+}
