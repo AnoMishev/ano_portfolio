@@ -1,0 +1,30 @@
+<ul>
+    <li *ngFor="let dog of breeds">
+    <a routerLink="/breed/{{dog.Id}}">
+    <span>
+        ID: {{dog.Id}}
+    </span>
+    <span>
+        Name {{dog.Name}}
+    </span>
+    </a>
+    <button type="button" (click)="deleteDog(dog)">X</button>
+    </li>
+    
+</ul>
+
+<div>
+    <label for="new-dog-name">Dog name:</label>
+    <input id="new-dog-name" #dogName>
+
+    <label for="new-dog-breed">Dog breed:</label>
+    <input id="new-dog-breed" #dogBreed>
+
+    <label for="new-dog-age">Dog Age:</label>
+    <input id="new-dog-age" #dogAge>
+
+    <button type="button" class="add-dog" (click)="addDog(dogName.value, dogBreed.value, dogAge.value)">ADD DOG</button>
+</div>
+<ng-template #loading>
+    <p>Loading breeds...</p>
+</ng-template>

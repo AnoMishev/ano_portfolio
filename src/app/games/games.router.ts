@@ -20,12 +20,16 @@ const routes: Routes = [
     {
         path: 'calculator',
         loadChildren: () => import('../games/calculator/calculator.component.module').then(m => m.CalculatorModule)
+    },
+    {
+        path: 'dogbreed',
+        loadChildren: () => import('../games/dogbreed/dogbreed.module').then(m => m.DogBreedModule)
     }
 ]
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: []
+    exports: [RouterModule]
 })
 export class GamesRouter {
 

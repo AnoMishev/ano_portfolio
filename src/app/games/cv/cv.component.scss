@@ -13,6 +13,11 @@ body {
 
     
 }
+
+p, h1, h2, h3, h4, h5, h6, li, span, dt, dd, a {
+    text-shadow: 1px 1px 1px black,
+    -1px -1px 1px black
+};
 :host {
     display: flex;
     flex-direction: row;
@@ -191,6 +196,8 @@ p {
     #msg {
         position: relative;
         bottom: 30px;
+        text-shadow: 1px 1px 1px black,
+        -1px -1px 1px black;
     }
 }
 
