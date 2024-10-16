@@ -9,6 +9,7 @@ import { FormsModule } from "@angular/forms";
 import { MainService } from "./services/main-service";
 import { BreedsComponent } from "./breeds/breeds.component";
 import { RouterModule } from "@angular/router";
+import { SharedService } from "./services/shared-service";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,7 @@ import { RouterModule } from "@angular/router";
       FormsModule,
       
     ],
-    providers: [MainService],
+    providers: [MainService, SharedService],
     exports: []  // No need to export RouterModule here unless used outside
 })
 export class DogBreedModule { }

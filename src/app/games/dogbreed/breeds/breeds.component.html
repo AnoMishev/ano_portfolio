@@ -1,4 +1,4 @@
-<ul>
+<ul id="breeds">
     <li *ngFor="let dog of breeds">
     <a routerLink="/breed/{{dog.Id}}">
     <span>
@@ -13,17 +13,28 @@
     
 </ul>
 
-<div>
+<div ngIf="isVisible" id="add-dog" >
+    <p>
     <label for="new-dog-name">Dog name:</label>
     <input id="new-dog-name" #dogName>
+    </p>
 
+    <p>
     <label for="new-dog-breed">Dog breed:</label>
     <input id="new-dog-breed" #dogBreed>
+    </p>
 
+    <p>
     <label for="new-dog-age">Dog Age:</label>
     <input id="new-dog-age" #dogAge>
+    </p>
 
+    <p>
     <button type="button" class="add-dog" (click)="addDog(dogName.value, dogBreed.value, dogAge.value)">ADD DOG</button>
+    </p>
+    <p>
+    <button type="button"  id="add-button" (click)="hideElement()">X</button>
+    </p>
 </div>
 <ng-template #loading>
     <p>Loading breeds...</p>
