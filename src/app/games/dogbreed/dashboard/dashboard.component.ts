@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { MainService } from "../services/main-service";
 import { DogBreed } from "../interfaces/dogbreed.interface";
-import { Observable } from "rxjs";
 
 @Component({
     selector: 'dash-board',

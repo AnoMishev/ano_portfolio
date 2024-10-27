@@ -2,18 +2,24 @@
     <li *ngFor="let dog of breeds">
     <a routerLink="/breed/{{dog.Id}}">
     <span>
-        ID: {{dog.Id}}
+        ID: <span class="red">{{dog.Id}}</span>
     </span>
     <span>
-        Name {{dog.Name}}
+        Name: <span class="red">{{dog.Name}}</span>
+    </span>
+    <span>
+        breed: <span class="red">{{dog.Breed}}</span>
+    </span>
+    <span>
+        Age: <span class="red">{{dog.Age}}</span>
     </span>
     </a>
-    <button type="button" (click)="deleteDog(dog)">X</button>
+    <button type="button" (click)="deleteDog(dog)" id="btn">x</button>
     </li>
     
 </ul>
 
-<div ngIf="isVisible" id="add-dog" >
+<div *ngIf="isVisible" id="add-dog" >
     <p>
     <label for="new-dog-name">Dog name:</label>
     <input id="new-dog-name" #dogName>
