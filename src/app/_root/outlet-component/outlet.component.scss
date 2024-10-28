@@ -455,10 +455,7 @@
 }
 
 @media only screen and (max-width: 776px) {
-    #portfolio {
-        background-image: none !important;
-        background-color: purple !important;
-    }
+
     :host {
         height: 100dvh;
         
@@ -487,7 +484,7 @@
         left: 29% !important;
     }
     #laptop {
-        left: -20% !important;
+        left: 39% !important;
 
         h1 {
             left: -140% !important;
@@ -575,3 +572,14 @@
 }
 
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles for larger iPhones like iPhone X, 11, 12, 13, etc. */
+    #laptop {
+        transform: translate(-54%, 0) !important;
+    }
+
+    #portfolio {
+        background-color: yellow !important;
+    }
+  }
+  
