@@ -574,12 +574,9 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
     /* Styles for larger iPhones like iPhone X, 11, 12, 13, etc. */
-    #laptop {
-        transform: translate(-54%, 0) !important;
+    #table {
+        top: 100px !important;
     }
 
-    #portfolio {
-        background-color: yellow !important;
-    }
   }
   
