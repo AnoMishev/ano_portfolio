@@ -570,28 +570,3 @@
         flex: 1;
     }
 }
-
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
-    #portfolio { 
-        height: 100dvh !important;
-    }
-    /* Styles for larger iPhones like iPhone X, 11, 12, 13, etc. */
-    #table {
-        position: relative !important;
-        bottom: -20% !important;
-
-        #laptop {
-            position: absolute !important;
-            top: 0 !important;
-        }
-
-        #leva-fioka,
-        #desna-fioka {
-            position: absolute !important;
-            top: 5% !important;
-        }
-    }
-
-  }
-  
