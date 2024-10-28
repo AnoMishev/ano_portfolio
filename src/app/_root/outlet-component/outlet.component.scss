@@ -573,19 +573,76 @@
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
-    #portfolio { 
-        height: 100dvh !important;
+    :host {
+        height: 100dvh;
     }
-    /* Styles for larger iPhones like iPhone X, 11, 12, 13, etc. */
-    #table {
-        position: relative !important;
-        bottom: 100px !important;
 
-        #laptop {
-            position: absolute !important;
-            top: 0 !important;
+    .one {
+        min-height: 300px !important;
+        min-width: 20px !important;
+    }
+
+    #laptop {
+        transform: translate(-24%, 0) !important;
+    }
+
+    #pinguin-on-laptop {
+        transform: translate(-18%, 0) !important;
+    }
+    #left-books {
+        display: none !important;
+    }
+
+    :host {
+        height: 100dvh;
+        
+    }
+    
+    #leva-fioka {
+        ul {
+            top: -90% !important;
+            left: 15% !important;
         }
     }
+
+    #desna-fioka {
+        ul {
+            top: -25% !important;
+            right: 40% !important;
+        }
+    }
+    #down {
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+
+    .menu {
+        top: 5% !important;
+        left: 29% !important;
+    }
+    #laptop {
+
+        h1 {
+            display: none !important;
+        }
+          
+    }
+
+
+    #left-pencil,
+    #left-books,
+    #right-flower {
+        display: none !important;
+    }
+    
+
+    .three {
+        display: none !important;
+   }
+   .one {
+       flex: 1 !important;
+   }
+
 
   }
   
