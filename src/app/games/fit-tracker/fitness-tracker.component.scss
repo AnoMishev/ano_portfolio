@@ -52,11 +52,17 @@
 
 @media only screen and (max-width: 767px) {
   :host {
+      grid-template-rows: auto 1fr;
       grid-template-columns: 1fr;
     
     }
 
+    .fit-header {
+      grid-row: 1 / 2;
+    }
+
     #map {
       grid-column: 1 / -1;
+      grid-row: 2 / 3;
     }
   }
