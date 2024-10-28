@@ -455,8 +455,13 @@
 }
 
 @media only screen and (max-width: 776px) {
+    #portfolio {
+        background-image: none !important;
+        background-color: purple !important;
+    }
     :host {
         height: 100dvh;
+        
     }
     
     #leva-fioka {
@@ -482,7 +487,7 @@
         left: 29% !important;
     }
     #laptop {
-        left: 39% !important;
+        left: -20% !important;
 
         h1 {
             left: -140% !important;
