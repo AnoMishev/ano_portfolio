@@ -431,6 +431,7 @@
 
 @media only screen and (max-width: 400px) {
     :host {
+        height: 100vh;
         height: 100dvh;
     }
 
@@ -440,11 +441,13 @@
     }
 
     #laptop {
+        -webkit-transform: translate(-24%, 0) !important;
         transform: translate(-24%, 0) !important;
     }
 
     #pinguin-on-laptop {
-        transform: translate(-18%, 0) !important;
+        -webkit-transform: translate(-24%, 0) !important;
+        transform: translate(-24%, 0) !important;
     }
     #left-books {
         display: none !important;
