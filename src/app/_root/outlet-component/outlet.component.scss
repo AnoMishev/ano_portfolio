@@ -49,7 +49,7 @@
 }
 
 #down {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
     height: 300px;
@@ -58,7 +58,7 @@
     align-items: flex-end;
     justify-content: center;
     #table {
-        width: 100vw;
+        width: 100%;
         height: auto;
         position: relative;
 
@@ -111,10 +111,6 @@
             left: 43%;
             top: -83px;
             background-image: url('../../../assets/images/laptop.png');
-
-            #mobile-visitor {
-                display: none;
-            }
 
             #mobile-visitor {
                 display: none;
