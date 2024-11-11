@@ -148,99 +148,6 @@
             from, to { border-color: transparent }
             50% { border-color: yellow;}
           }
-        // #laptop::after {
-        //     position: absolute;
-            
-        //     top: -200%;
-        //     left: 60%;
-        //     z-index: 1111111111;
-        //     content: "Hello, I'am Andrej";
-        //     color: yellow;
-        //     text-shadow: 1px 1px 1px black,
-        //     -0.2px -0.2px 1px black;
-        //     width: 300px;
-        //     height: 170px;
-        //     font-size: 1.7em;
-        //     padding-top: 70px;
-        //     margin: 0;
-        //     background-image: url('../../../assets/images/purple_cloud.png');
-        //     background-repeat: no-repeat;
-        //     background-size: 100%;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-
-        //     animation: popUp 1s 1 ease-in-out;
-        // }
-
-
-
-        // #laptop::before {
-            
-        //     position: absolute;
-        //     white-space: pre-wrap;
-        //     top: -180%;
-        //     left: -170%;
-        //     z-index: 1111111111;
-        //     content: "Left desk for apps,\A right for cv";
-        //     color: yellow;
-        //     text-shadow: 1px 1px 1px black,
-        //     -0.2px -0.2px 1px black;
-        //     width: 300px;
-        //     height: 170px;
-        //     font-size: 1.7em;
-        //     margin: 0;
-        //     padding-top: 50px;
-        //     background-image: url('../../../assets/images/purple_cloud.png');
-        //     background-repeat: no-repeat;
-        //     background-size: 100%;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-
-        //     animation: popUp 3s 1 ease-in-out;
-        // }
-
-        // #closePseudoElement {
-        //     position: absolute;
-        //     width: 15px;
-        //     height: 15px;
-        //     top: -143%;
-        //     left: 212%;
-        //     z-index: 999999999999;
-        // }
-
-        // #closePseudoElementLeft {
-        //         position: absolute;
-        //         width: 15px;
-        //         height: 15px;
-        //         top: -123%;
-        //         left: -17%;
-        //         z-index: 999999999999;
-        // }
-        // #closePseudoElementLeft,
-        // #closePseudeoElement:hover {
-        //     cursor: pointer;
-        // }
-
-        // #closePseudoElement:checked ~ #laptop::after {
-        //     content: ''; /* This will remove the content */
-        //     display: none; /* This will hide the pseudo-elements */
-        //     opacity: 0;
-        // }
-
-        // @keyframes popUp {
-        //     0% {
-        //         opacity: 0;
-        //         transform: scale(0);
-        //     }
-
-        //     100% {
-        //         opacity: 1;
-        //         transform: scale(1);
-        //     }
-            
-        // }
 
         #pinguin-on-laptop {
             width: 200px;
@@ -430,7 +337,7 @@
 
 
 @media only screen and (max-width: 400px) {
-    :host {
+    #portfolio {
         height: 100vh;
         height: 100dvh;
     }
@@ -459,7 +366,7 @@
 
 @media only screen and (max-width: 776px) {
 
-    :host {
+    #portfolio {
         height: 100vh;
         height: 100dvh;
         
