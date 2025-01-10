@@ -1,0 +1,209 @@
+
+:host > section {
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2em;
+    font-weight: bold;
+    padding: 1em;
+
+    &.active-class {
+        position: fixed !important;/* Change to absolute when modal is open */
+        top: 0 !important;
+        overflow: hidden;
+
+        #aboutme {
+            max-width: 650px;
+            font-size: 0.9em;
+            text-shadow: 1px 1px 1px black;
+            transition: all 5s ease-in-out;
+        }
+      }
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+
+    #left {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        #my-info {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5em;
+
+            ul {
+                text-shadow: 0.5px 0.5px 0.5px black;
+                list-style-type: none;
+                li {
+                    display: flex;
+                    gap: 0.5em;
+                    transition: all 0.15s ease-in-out;
+                }
+
+                li:hover {
+                    transform: scale(0.9);
+                    cursor: pointer;
+                }
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.15s ease-in-out;
+                }
+            }
+        }
+
+
+    }
+    #right { 
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+}
+#logo {
+    position: relative;
+}
+
+
+app-eyes {
+    position: fixed;
+    top: 0;
+    padding: 3em;
+}
+#pinguin {
+    display: none;
+}
+
+#download {
+    text-decoration: none;
+    color: tomato;
+    text-transform: uppercase;
+    transition: all 0.15s ease-in-out;
+}
+
+#download:hover {
+    color: white;
+}
+
+.hover-green {
+    transition: all 0.15s ease-in-out;
+}
+.hover-green:hover {
+    color: lightgreen;
+}
+
+.active {
+    padding-top: 3em;
+}
+
+.about-list {
+    li {
+        transition: all 0.15s ease-in-out;
+    }
+    li:hover {
+        color: tomato;
+    }
+}
+
+@media all and (min-width: 1225px) and (max-width: 1528px) {
+    #my-info {
+
+        ul {
+        font-size: 0.9em;
+        }
+    }
+  }
+
+  @media all and (min-width: 1108px) and (max-width: 1224px) {
+    #my-info {
+
+        ul {
+        font-size: 0.8em;
+        }
+    }
+  }
+
+  
+  @media all and (min-width: 1108px) and (max-width: 1301px) {
+    #aboutme {
+        max-width: 300px !important;
+        font-size: 0.8em !important;
+    }
+  }
+
+  @media all and (min-width: 350px) and (max-width: 1108px) {
+    :host {
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+    #photo {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #info {
+        display: grid;
+        justify-content: center;
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+        margin-left: auto !important;
+    }
+
+    #aboutme {
+        max-width: 80vw !important;
+        font-size: 0.7em !important;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column !important;
+    }
+    #my-info {
+        ul {
+            font-size: 1.6rem;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+
+    :host > section {
+        position: relative;
+        top: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    
+        font-size: 2em;
+        font-weight: bold;
+        padding: 1em;
+    
+        &.active-class {
+            position: relative !important;/* Change to absolute when modal is open */
+            top: 0 !important;
+            overflow: hidden;
+    
+            #aboutme {
+                max-width: 650px;
+                font-size: 0.9em;
+                text-shadow: 1px 1px 1px black;
+                transition: all 5s ease-in-out;
+            }
+          }
+    }
+  }

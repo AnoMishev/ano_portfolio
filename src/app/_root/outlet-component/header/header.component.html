@@ -1,0 +1,33 @@
+<app-eyes></app-eyes>
+<div id="photo" *ngIf="!isModalOpen"><img src="../../../../assets/images/ee52b623-d288-45f9-962b-63ebb775b5ad-removebg-preview.png" alt=""></div>
+<section [ngClass]="{ 'active-class': isModalOpen }">
+<app-logo id="logo" *ngIf="!isModalOpen">
+</app-logo>
+<section id="info">
+    <div id="left">
+        <div id="my-info">
+            <ul *ngIf="!isModalOpen">
+                <li class="hover-green">Welcome to my portfolio</li>
+                <li class="hover-green">Full Stack JavaScript Developer</li>
+            </ul>
+            <ul class="about-list" [ngClass]="{ 'active': isModalOpen }">
+                <li>
+                    <span>01</span>
+                    <a (click)="openModal()">About Me</a>
+                </li>
+                <li>
+                    <span>02</span>
+                    <a href="mailto:anomishev@icloud.com">Contact Me</a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+</section>
+<p *ngIf="isModalOpen" id="aboutme">
+    As a young and passionate individual eager to begin my career in web development, I am driven by a strong desire to learn and grow. While I may not have formal work experience yet, I have dedicated myself to building a solid foundation in web technologies and design principles.
+                I am enthusiastic about the opportunity to work in a professional environment where I can contribute, learn from experienced developers, and take on new challenges. My dedication, creativity, and problem-solving skills allow me to quickly adapt and thrive in new situations.
+                I am committed to continuously improving my skills and staying updated with the latest trends in the industry. I am confident that my energy, eagerness to learn, and passion for web development will make me a valuable asset to any team.
+                <a href="../../../../assets/docs/Andrej Mishev ENGLISH CV.pdf" download="Aleksandar_Trendafilov_CV.pdf" id="download">Please click here to download my CV</a>
+            </p>
+</section>

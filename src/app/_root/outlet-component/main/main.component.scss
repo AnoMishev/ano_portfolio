@@ -1,0 +1,124 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+ul {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    height: 140%;
+
+    list-style-type: none;
+
+    font-size: 10em;
+    margin: 0;
+    padding: 0;
+    background-color: tomato;
+    li {
+
+        a {
+          
+            padding: 0;
+            margin: 0;
+            padding-right: 1em;
+            text-shadow: 4px 4px 1px rgb(70, 70, 70);
+            
+        }
+    }
+
+    li:hover {
+        cursor: pointer;
+        div a {
+            color: lightgreen;
+        }
+    }
+
+    li { /* Spacing between items */
+        font-size: 10rem; /* Large text */
+        text-transform: uppercase;
+        position: relative;
+      }
+
+      li div {
+        position: relative;
+      }
+      
+      li div a {
+        position: relative;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 5px 5px 1px black,
+        -5px -5px 1px black;
+        transition: transform 0.3s ease, text-shadow 0.3s ease;
+      }
+    
+    
+}
+
+@media all and (min-width: 1225px) and (max-width: 1528px) {
+    ul {
+        height: 100%;
+        li {
+        font-size: 8rem;
+        }
+    }
+  }
+
+  @media all and (min-width: 1108px) and (max-width: 1224px) {
+    ul {
+        height: 100%;
+        li {
+        font-size: 7rem;
+
+            a {
+                padding-right: 0.3em;
+            }
+        }
+    }
+  }
+
+  @media all and (min-width: 350px) and (max-width: 1108px) {
+    :host {
+        width: 100vw;
+        height: 100vh;
+        background-color: tomato;
+    }
+  }
+
+
+  
+
+@media all and (min-width: 350px) and (max-width: 1108px) {
+    :host {
+        width: 100vw !important;
+        height: 100vh !important;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        height: 60%;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        li {
+            font-size: 5rem;
+            padding: 0;
+            margin: 0;
+            div {
+                display: flex;
+                a {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+  }

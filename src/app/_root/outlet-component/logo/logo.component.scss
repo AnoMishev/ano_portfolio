@@ -1,0 +1,57 @@
+:host {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+#tomato {
+    color: tomato;
+}
+
+#typing-text {
+    display: inline-block;
+    border-right: 2px solid tomato; /* Cursor effect */
+    animation: typing 4s steps(16) 1s forwards, blink 0.8s step-end infinite;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 64%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media all and (min-width: 1108px) and (max-width: 1527px) {
+    :host {
+        font-size: 1.5em;
+    }
+
+
+
+  }
+
+  
+
+@media all and (min-width: 350px) and (max-width: 1108px) {
+    :host {
+        font-size: 1em;
+        text-align: center;
+    }
+    #typing-text {
+        display: inline-block;
+        border-right: 2px solid transparent; /* Cursor effect */
+        animation: typing 4s steps(16) 1s forwards, blink 0.8s step-end infinite;
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden;
+    }
+  }

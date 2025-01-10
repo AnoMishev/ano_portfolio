@@ -3,9 +3,11 @@ import { CVComponent } from "./cv.component";
 import { CVRoutingModule } from "./cv-routing.module";
 import { CommonModule } from "@angular/common";
 
+
+
 @NgModule({
     declarations: [
-      CVComponent
+      CVComponent,
     ],
     imports: [
       CommonModule,

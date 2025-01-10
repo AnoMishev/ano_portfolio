@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OutletComponent } from './outlet-component/outlet.component';
 import { IntroComponent } from './intro/intro.component';
+import { CVComponent } from './outlet-component/cv/cv.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
     },
   {
     path: 'cv',
-    loadChildren: () => import('../games/cv/cv.module').then(m => m.CVModule)
+    component: CVComponent
   },
   {
     path: "**",
