@@ -47,7 +47,15 @@
                 }
 
                 li:hover {
+                    cursor: pointer;
+                }
+                a:hover {
                     transform: scale(0.9);
+                    cursor: pointer;
+                    color: tomato;
+                }
+
+                .links:hover {
                     cursor: pointer;
                 }
                 a {
@@ -117,6 +125,16 @@ app-eyes {
     display: none;
 }
 
+#checkout {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+
+    color: rgb(255, 74, 74);
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+}
+
 @media all and (min-width: 1225px) and (max-width: 1528px) {
     #my-info {
 
@@ -145,6 +163,7 @@ app-eyes {
   }
 
   @media all and (min-width: 350px) and (max-width: 1108px) {
+
     :host {
         width: 100vw !important;
         height: 100vh !important;
@@ -183,6 +202,13 @@ app-eyes {
             font-size: 1.6rem;
             padding: 0;
             margin: 0;
+        }
+        #checkout {
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -80%;
         }
     }
 

@@ -11,7 +11,7 @@ export class MainService {
     private  _httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    private _breedAdress = 'http://localhost:8080/breeds'
+    private _breedAdress = 'https://dogbreed-api.onrender.com/breeds'
     getBreeds(): Observable<Array<DogBreed>> {
         return this.HTTP_CLIENT.get<Array<DogBreed>>(this._breedAdress)
       }
