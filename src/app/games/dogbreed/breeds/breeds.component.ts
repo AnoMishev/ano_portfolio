@@ -46,6 +46,7 @@ export class BreedsComponent implements OnInit {
     const newDog: DogBreed = { Name: name, Breed: breed, Age: AGE };
     this._mainService.addDog(newDog).subscribe(() => {
       this.loadBreeds();
+      this.hideElement();
     });
   }
 

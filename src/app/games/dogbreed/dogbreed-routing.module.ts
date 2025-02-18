@@ -7,21 +7,20 @@ import { BreedsComponent } from "./breeds/breeds.component";
 
 
 const routes: Routes = [
-    {
-        path: '',  // Parent path for dogbreed
-        component: DogBreedComponent,  // The layout component
-        children: [
-          { path: 'breeds', component: BreedsComponent },
-          { path: 'dashboard', component: DashBoardComponent },
-          { path: 'breed/:id', component: BreedComponent}
-        ],
-      },
-]
+  {
+      path: '',  // Parent path for dogbreed
+      component: DogBreedComponent,  // The layout component
+      children: [
+        { path: '', redirectTo: 'breeds', pathMatch: 'full' }, // Redirect empty path to 'breeds'
+        { path: 'breeds', component: BreedsComponent },
+        { path: 'dashboard', component: DashBoardComponent },
+        { path: 'breed/:id', component: BreedComponent }
+      ],
+  },
+];
+
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
-    
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class DogBreedRouter{
-    
-}
+export class DogBreedRouter { }
