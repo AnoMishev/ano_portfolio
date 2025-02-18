@@ -17,7 +17,7 @@ export class DogBreedComponent implements OnInit {
     this.subscription = this.sharedService.visibility$.subscribe(visible => {
       this.isVisible = visible;
     });
-    alert('For this application, you need to start the my back end API(from github)')
+    alert('For this application, i have started my API you can check it on github')
   }
 
   openAddDog() {
